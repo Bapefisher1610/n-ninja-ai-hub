@@ -3,13 +3,17 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { ChatBot } from "@/components/chatbot/ChatBot";
+import Layout from "./components/layout/Layout";
 import Index from "./pages/Index";
-import NinjaAI from "./pages/NinjaAI";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfUse from "./pages/TermsOfUse";
+import AboutSkills from "./pages/About/Skills";
+import AboutEducation from "./pages/About/Education";
+import AboutProjects from "./pages/About/Projects";
+import NinjaAI from "./pages/Programs/NinjaAI";
+import Events from "./pages/Events";
+import News from "./pages/News";
+import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
+import TermsOfService from "./pages/Legal/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,20 +24,21 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/chuong-trinh/ninja-ai" element={<NinjaAI />} />
-              <Route path="/chinh-sach-bao-mat" element={<PrivacyPolicy />} />
-              <Route path="/dieu-khoan-su-dung" element={<TermsOfUse />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-          <ChatBot />
-        </div>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/gioi-thieu/ky-nang" element={<AboutSkills />} />
+            <Route path="/gioi-thieu/hoc-van" element={<AboutEducation />} />
+            <Route path="/gioi-thieu/du-an" element={<AboutProjects />} />
+            <Route path="/chuong-trinh/ninja-ai" element={<NinjaAI />} />
+            <Route path="/su-kien" element={<Events />} />
+            <Route path="/tin-tuc" element={<News />} />
+            <Route path="/lien-he" element={<Contact />} />
+            <Route path="/chinh-sach-bao-mat" element={<PrivacyPolicy />} />
+            <Route path="/dieu-khoan-su-dung" element={<TermsOfService />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

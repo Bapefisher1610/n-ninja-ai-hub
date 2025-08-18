@@ -1,287 +1,332 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { Code, Palette, TrendingUp, Brain, ArrowRight, Star, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { AnimatedSection } from "@/components/ui/animated-section";
-import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import {
+  Zap,
+  Code,
+  Palette,
+  TrendingUp,
+  Bot,
+  Video,
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  Mail,
+  MapPin,
+  Heart,
+} from "lucide-react";
+import heroPortrait from "@/assets/áo mu.jpg";
+import ninjaAIBanner from "@/assets/ninja-ai-banner.jpg";
 
 const Index = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const strengthsRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
+
+  // Cuộn về đầu trang khi component load
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in-up");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    [heroRef, strengthsRef, contactRef].forEach((ref) => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const strengths = [
     {
-      icon: <Code className="h-8 w-8" />,
-      title: "Lập trình",
-      description: "Chuyên môn sâu về Frontend, Backend và Mobile Development"
+      icon: <Code className="w-8 h-8 text-primary" />,
+      title: "FrontEnd Developer",
+      description:
+        "Chuyên nghiệp trong React, TypeScript, Tailwind CSS và các công nghệ web hiện đại nhất.",
     },
     {
-      icon: <Palette className="h-8 w-8" />,
-      title: "Thiết kế",
-      description: "UI/UX Design và Visual Identity với tư duy sáng tạo"
+      icon: <Palette className="w-8 h-8 text-secondary-dark" />,
+      title: "UI/UX Design",
+      description:
+        "Kết hợp nghệ thuật và khoa học để tạo ra những trải nghiệm người dùng đáng nhớ.",
     },
     {
-      icon: <TrendingUp className="h-8 w-8" />,
-      title: "Marketing",
-      description: "Digital Marketing và Growth Hacking cho sản phẩm công nghệ"
+      icon: <TrendingUp className="w-8 h-8 text-accent" />,
+      title: "Digital Marketing",
+      description:
+        "Hiểu sâu về marketing số và tối ưu hóa trải nghiệm khách hàng trực tuyến.",
     },
     {
-      icon: <Brain className="h-8 w-8" />,
-      title: "Artificial Intelligence",
-      description: "Machine Learning, Deep Learning và AI Applications"
-    }
-  ];
-
-  const stats = [
-    { number: "5+", label: "Năm kinh nghiệm" },
-    { number: "100+", label: "Dự án hoàn thành" },
-    { number: "50+", label: "Thực tập sinh đào tạo" },
-    { number: "10+", label: "Công nghệ thành thạo" }
+      icon: <Bot className="w-8 h-8 text-success" />,
+      title: "AI Chatbot",
+      description:
+        "Phát triển và triển khai các giải pháp AI thông minh cho doanh nghiệp.",
+    },
+    {
+      icon: <Video className="w-8 h-8 text-warning" />,
+      title: "Content Creator",
+      description:
+        "Tạo nội dung chất lượng cao về công nghệ và lập trình cho cộng đồng.",
+    },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="hero-section section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
-        
-        {/* Parallax Background */}
-        <motion.div 
-          className="absolute inset-0 bg-cover bg-center"
+      <section
+        ref={heroRef}
+        className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-black/20" />
+        <div
+          className="absolute inset-0 parallax-bg opacity-900"
           style={{
-            backgroundImage: "url('/lovable-uploads/a01734ff-14c4-4b0b-91a5-eb8038fee2cd.png')",
-            filter: "brightness(0.3)"
+            backgroundImage: `url(${ninjaAIBanner})`,
           }}
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2, ease: "easeOut" }}
         />
-        
-        <div className="container-padding relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-            <AnimatedSection className="text-center lg:text-left">
-              <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-                Chu Tiến Sơn
-              </motion.h1>
-              <motion.p 
-                className="text-xl md:text-2xl text-white/90 mb-4"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                Lập Trình Viên, Nhà Sáng Lập & Mentor
-              </motion.p>
-              <motion.p 
-                className="text-lg text-white/80 mb-8 max-w-2xl"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                Với tầm nhìn tạo ra những sản phẩm công nghệ có ý nghĩa, tôi đồng hành cùng 
-                các bạn trẻ trong hành trình chinh phục thế giới AI và lập trình.
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <Button asChild className="btn-hero">
-                  <Link to="/chuong-trinh/ninja-ai">
-                    Khám phá Ninja AI
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+
+        <div className="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left animate-fade-in-left">
+            <h1 className="mb-6 leading-tight">
+              <span className="block text-center text-xl md:text-4xl lg:text-5xl font-bold text-white -mt-2 lg:-mt-4">
+                Nguyễn Gia Đạt
+              </span>
+
+              <br></br>
+              <span className="block text-center text-base md:text-2xl lg:text-3xl font-semibold text-gradient-primary">
+                From Ninja Ai
+              </span>
+              <br></br>
+              <span className="block text-center text-base md:text-lg lg:text-xl font-medium text-white">
+                “Tương lai của AI không phải là thay thế con người, mà là tăng
+                cường khả năng của con người.”
+              </span>
+              <span className="block mt-8 text-sm md:text-base lg:text-lg font-medium text-gray-400">
+                Lập Trình Viên FrontEnd, BackEnd, Machine Learning và Ứng dụng
+                AI-First với các công nghệ sử dụng: HTML5, CSS3, TailwindCSS,
+                ReactJS, VueJS, NodeJS, ExpressJS, MongoDB, MySQL, Python.
+              </span>
+            </h1>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Link to="/chuong-trinh/ninja-ai">
+                <Button
+                  size="lg"
+                  className="relative bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 
+               text-white font-semibold hover:from-green-600 hover:to-green-700 
+               shadow-lg shadow-green-300/50 
+               hover:shadow-xl hover:shadow-green-400/60 
+               transition-all duration-300 ease-in-out 
+               px-8 py-4 text-lg rounded-2xl overflow-hidden animate-breathe"
+                  onClick={() =>
+                    document
+                      .getElementById("application-form")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  <span className="relative z-10 flex items-center">
+                    Tìm hiểu chương trình TTS Ninja AI
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <Zap className="w-5 h-5 ml-2 animate-pulse" />
+                  </span>
+
+                  {/* Hiệu ứng ánh sáng quét qua nút */}
+                  <span
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
+                     translate-x-[-100%] hover:translate-x-[100%] 
+                     transition-transform duration-700 ease-in-out rounded-2xl"
+                  />
                 </Button>
-              </motion.div>
-            </AnimatedSection>
-            
-            <AnimatedSection delay={0.4} className="lg:flex justify-end">
-              <div className="grid grid-cols-2 gap-4 text-center">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white"
-                  >
-                    <div className="text-3xl font-bold text-secondary">{stat.number}</div>
-                    <div className="text-sm text-white/80">{stat.label}</div>
-                  </motion.div>
-                ))}
+              </Link>
+
+              <Link to="/gioi-thieu/du-an">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-primary text-primary hover:bg-primary hover:text-white btn-scale px-8 py-4 text-lg"
+                >
+                  Xem dự án tiêu biểu
+                </Button>
+              </Link>
+            </div>
+
+            <div className="mt-8 flex items-center gap-6 justify-center lg:justify-start text-sm text-white">
+              <div className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-warning fill-current" />
+                <span className="font-semibold">5+ năm kinh nghiệm</span>
               </div>
-            </AnimatedSection>
+
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-primary" />
+                <span className="font-semibold">100+ dự án thành công</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-4 h-4 text-secondary-dark" />
+                <span className="font-semibold">Mentor chuyên nghiệp</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center lg:justify-end animate-float ">
+            <div className="relative">
+              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-xl border-4 border-white/20">
+                <img
+                  src={heroPortrait}
+                  alt="Nguyễn Gia Đạt - Professional Portrait"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Strengths Section */}
-      <section className="section-padding bg-background">
-        <div className="container-padding">
-          <AnimatedSection className="text-center mb-16">
+      <section ref={strengthsRef} className="py-20 bg-background-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Thế Mạnh Nổi Bật
+              Thế mạnh nổi bật
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Kết hợp đa dạng kỹ năng từ technical đến creative, tạo nên sự khác biệt 
-              trong từng dự án và sản phẩm.
+              Những lĩnh vực tôi đam mê và có thể mang lại giá trị cho dự án của
+              bạn
             </p>
-          </AnimatedSection>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {strengths.map((strength, index) => (
-              <AnimatedSection key={index} delay={index * 0.1}>
-                <Card className="card-warm card-hover h-full">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-primary mb-4 flex justify-center">
-                      {strength.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      {strength.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {strength.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </AnimatedSection>
+              <Card
+                key={index}
+                className="p-6 text-center card-hover-green bg-gradient-card border-none hover:scale-105 transition-all duration-300"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center">
+                    {strength.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  {strength.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {strength.description}
+                </p>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Project Section */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-padding">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Dự Án Tiêu Biểu
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Những sản phẩm công nghệ đã được phát triển và triển khai thành công.
-            </p>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.2}>
-            <Card className="card-warm overflow-hidden max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="bg-gradient-teal p-8 lg:p-12 flex items-center">
-                  <div className="text-white">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                      Ninja AI Platform
-                    </h3>
-                    <p className="text-white/90 mb-6">
-                      Nền tảng đào tạo AI toàn diện với hệ thống học tập thông minh, 
-                      theo dõi tiến độ và mentor 1-1. Đã đào tạo thành công hơn 50 
-                      thực tập sinh trở thành AI Developer.
-                    </p>
-                    <div className="flex items-center space-x-4 text-sm">
-                      <div className="flex items-center">
-                        <Star className="h-4 w-4 mr-1" />
-                        <span>5.0 Rating</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="h-4 w-4 mr-1" />
-                        <span>50+ Students</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Award className="h-4 w-4 mr-1" />
-                        <span>95% Success</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-8 lg:p-12 flex items-center justify-center bg-gradient-warm">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">🚀</div>
-                    <p className="text-muted-foreground">
-                      Khám phá thêm về chương trình và cách thức hoạt động
-                    </p>
-                    <Button asChild className="btn-secondary mt-4">
-                      <Link to="/chuong-trinh/ninja-ai">
-                        Tìm hiểu thêm
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* Work Style & Contact Section */}
-      <section className="section-padding bg-background" id="contact">
-        <div className="container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <AnimatedSection>
+      <section ref={contactRef} className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Phong Cách Làm Việc
+                Phong cách làm việc & Liên hệ
               </h2>
-              <div className="space-y-4 text-muted-foreground">
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p>Luôn đặt chất lượng sản phẩm và trải nghiệm người dùng lên hàng đầu</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p>Áp dụng phương pháp Agile và Design Thinking trong mọi dự án</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p>Mentoring tận tâm với từng cá nhân, phát triển kỹ năng toàn diện</p>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p>Liên tục học hỏi và cập nhật công nghệ mới nhất</p>
-                </div>
-              </div>
-              
-              <div className="mt-8 p-6 bg-muted/50 rounded-xl">
-                <p className="text-lg font-medium text-foreground mb-2">
-                  "Thành công không phải là đích đến, mà là hành trình của sự học hỏi không ngừng."
-                </p>
-                <p className="text-sm text-muted-foreground">- Chu Tiến Sơn</p>
-              </div>
-            </AnimatedSection>
 
-            <AnimatedSection delay={0.2}>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Kết Nối Với Tôi
-              </h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">Email</h3>
-                  <p className="text-muted-foreground">chutienson@ninjaai.hub</p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">Sở thích</h3>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <p className="text-muted-foreground">
-                    Đọc sách công nghệ, chơi cờ vua, du lịch khám phá và chia sẻ kiến thức 
-                    qua các workshop, seminar về AI và lập trình.
+                    <strong className="text-foreground">
+                      Tận tâm với từng dự án:
+                    </strong>{" "}
+                    Luôn đặt chất lượng và trải nghiệm người dùng lên hàng đầu
                   </p>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-2">Mục tiêu</h3>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <p className="text-muted-foreground">
-                    Góp phần đào tạo thế hệ developer Việt Nam có tư duy sáng tạo và 
-                    kỹ năng vững chắc, sẵn sàng cạnh tranh trên thị trường quốc tế.
+                    <strong className="text-foreground">
+                      Học hỏi không ngừng:
+                    </strong>{" "}
+                    Luôn cập nhật các công nghệ và xu hướng mới nhất
                   </p>
                 </div>
-                
-                <Card className="card-warm p-6">
-                  <h4 className="font-semibold text-foreground mb-4">
-                    Bạn muốn hợp tác hoặc tìm hiểu thêm?
-                  </h4>
-                  <Button asChild className="btn-hero w-full">
-                    <Link to="/chuong-trinh/ninja-ai">
-                      Tham gia Ninja AI ngay
-                    </Link>
-                  </Button>
-                </Card>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground">
+                    <strong className="text-foreground">
+                      Hợp tác hiệu quả:
+                    </strong>{" "}
+                    Giao tiếp rõ ràng và phản hồi nhanh chóng
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground">
+                    <strong className="text-foreground">
+                      Sáng tạo và đổi mới:
+                    </strong>{" "}
+                    Không ngừng tìm kiếm những giải pháp độc đáo
+                  </p>
+                </div>
               </div>
-            </AnimatedSection>
+            </div>
+
+            <div>
+              <Card className="p-8 bg-gradient-card border-none shadow-lg">
+                <h3 className="text-2xl font-semibold text-foreground mb-6">
+                  Thông tin liên hệ
+                </h3>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-primary" />
+                    <span className="text-foreground">
+                      nguyengiadat2k03@gmail.com
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <MapPin className="w-5 h-5 text-primary" />
+                    <span className="text-foreground">
+                      Hai Bà Trưng - Hà Nội
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-4 bg-secondary/20 rounded-lg">
+                  <p className="text-muted-foreground mb-2">
+                    <strong className="text-foreground">Sở thích:</strong> Đá
+                    bóng, xem phim, đọc sách về công nghệ.
+                  </p>
+                  <p className="text-muted-foreground">
+                    <strong className="text-foreground">Mục tiêu:</strong> Trở
+                    thành một mentor giúp nhiều người trẻ phát triển sự nghiệp
+                    trong lĩnh vực công nghệ
+                  </p>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <p className="text-lg font-medium text-gradient-primary italic">
+                    "Mỗi dòng code đều có thể thay đổi thế giới"
+                  </p>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <Link to="/lien-he">
+                    <Button className="bg-gradient-primary text-white hover:bg-primary-dark btn-scale">
+                      Liên hệ ngay <Heart className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
