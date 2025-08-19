@@ -17,7 +17,7 @@ import {
   MapPin,
   Heart,
 } from "lucide-react";
-import heroPortrait from "@/assets/áo mu.jpg";
+import heroPortrait from "https://hprnobwbirflkiwscbhd.supabase.co/storage/v1/object/sign/IMage/gmail.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZDVkYzgwMS03NmQwLTRhNTgtODZlMi01YTljMmRjZjNmYTIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJTWFnZS9nbWFpbC5qcGciLCJpYXQiOjE3NTU2MjY4NDAsImV4cCI6MTc1ODIxODg0MH0.F8CXM0JFlqPWRfvFmYHRn63sBhj6USBWAxbDzK35LpE";
 import ninjaAIBanner from "@/assets/ninja-ai-banner.jpg";
 
 const Index = () => {
