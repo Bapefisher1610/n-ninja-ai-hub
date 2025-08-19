@@ -50,6 +50,65 @@ export type Database = {
         }
         Relationships: []
       }
+      chatbot_messages: {
+        Row: {
+          content: string
+          created_at: string
+          id: number
+          role: string
+          session_id: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: never
+          role: string
+          session_id: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: never
+          role?: string
+          session_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "chatbot_messages_session_id_fkey"
+            columns: ["session_id"]
+            isOneToOne: false
+            referencedRelation: "chatbot_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      chatbot_sessions: {
+        Row: {
+          id: string
+          session_end_at: string | null
+          session_key: string | null
+          session_start_at: string
+          status: string
+          user_id: string | null
+        }
+        Insert: {
+          id?: string
+          session_end_at?: string | null
+          session_key?: string | null
+          session_start_at?: string
+          status?: string
+          user_id?: string | null
+        }
+        Update: {
+          id?: string
+          session_end_at?: string | null
+          session_key?: string | null
+          session_start_at?: string
+          status?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

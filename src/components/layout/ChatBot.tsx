@@ -67,7 +67,7 @@ const ChatBot = () => {
     setIsTyping(true);
 
     try {
-      const response = await fetch('https://yoxkoxpwgiwskdnjjhyd.supabase.co/functions/v1/chatbot-ai', {
+      const response = await fetch('https://hprnobwbirflkiwscbhd.supabase.co/functions/v1/chatbot-ai', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
