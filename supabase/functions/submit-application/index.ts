@@ -33,22 +33,20 @@ serve(async (req) => {
       );
     }
 
-    // Insert into students table
-    console.log('Attempting to insert:', { fullName, email, phoneNumber, cvUrl });
-    
+    // Insert into applications table
     const { data, error } = await supabase
-      .from('students')
+      .from('applications')
       .insert([
         {
           full_name: fullName,
           email: email,
-          phone_number: phoneNumber,
+          phone: phoneNumber,
           cv_url: cvUrl || '',
           status: 'pending'
         }
       ])
       .select();
-    
+
     console.log('Insert result:', { data, error });
 
     if (error) {
@@ -65,7 +63,7 @@ serve(async (req) => {
             }
           );
         }
-        if (error.message.includes('phone_number')) {
+        if (error.message.includes('phone')) {
           return new Response(
             JSON.stringify({ error: 'Số điện thoại này đã được sử dụng' }),
             {

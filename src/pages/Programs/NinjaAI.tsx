@@ -90,7 +90,7 @@ interface ApplicationFormData {
           .substring(2)}.${fileExt}`;
 
         const { data: uploadData, error: uploadError } = await supabase.storage
-          .from("cv_uploads")
+          .from("cv-uploads")
           .upload(fileName, formData.cvFile);
 
         if (uploadError) {
@@ -106,7 +106,7 @@ interface ApplicationFormData {
         // Get public URL
         const {
           data: { publicUrl },
-        } = supabase.storage.from("cv_uploads").getPublicUrl(uploadData.path);
+        } = supabase.storage.from("cv-uploads").getPublicUrl(uploadData.path);
 
         cvUrl = publicUrl;
       }
