@@ -43,11 +43,19 @@ const NinjaAI = () => {
     }
   }, [location.state]);
 
-  const [formData, setFormData] = useState<FormData>({
+interface ApplicationFormData {
+    fullName: string;
+    email: string;
+    phone: string;
+    cvFile: File | null;
+    motivation: string;
+  }
+
+  const [formData, setFormData] = useState<ApplicationFormData>({
     fullName: "",
     email: "",
     phone: "",
-    cvFile: null as File | null,
+    cvFile: null,
     motivation: "",
   });
 
