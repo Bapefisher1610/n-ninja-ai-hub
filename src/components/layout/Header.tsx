@@ -33,7 +33,7 @@ const Header = () => {
   const navItems = [
     { label: "Trang chủ", href: "/" },
     {
-      label: "Giới thiệu về Đạt",
+      label: "Giới thiệu về Sơn",
       isDropdown: true,
       items: [
         { label: "Kỹ Năng", href: "/gioi-thieu/ky-nang" },
@@ -67,7 +67,7 @@ const Header = () => {
               alt="Logo"
               className="w-8 h-8 rounded-lg object-cover"
             />
-            <span className="hidden sm:block">Đạt</span>
+            <span className="hidden sm:block">Sơn</span>
           </Link>
 
           {/* Desktop Navigation */}

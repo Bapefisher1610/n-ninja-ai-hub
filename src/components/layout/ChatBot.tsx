@@ -25,7 +25,7 @@ const ChatBot = () => {
     {
       id: "1",
       content:
-        "Xin chào! Tôi là ĐạtGPT 🤖 Tôi có thể giúp bạn tìm hiểu về Nguyễn Gia Đạt và Chương trình TTS Ninja AI. Bạn muốn biết điều gì?",
+        "Xin chào! Tôi là SơnGPT 🤖 Tôi có thể giúp bạn tìm hiểu về Chu Tiến Sơn và Chương trình TTS Ninja AI. Bạn muốn biết điều gì?",
       isUser: false,
       timestamp: new Date(),
     },
@@ -35,7 +35,7 @@ const ChatBot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const quickQuestions = [
-    "Nguyễn Gia Đạt là ai?",
+    "Chu Tiến Sơn là ai?",
     "Chương trình Ninja AI là gì?",
     "Làm thế nào để ứng tuyển?",
     "Những kỹ năng cần thiết?",
@@ -121,10 +121,10 @@ const ChatBot = () => {
     const lowerMessage = userMessage.toLowerCase();
 
     if (
-      lowerMessage.includes("đạt") ||
-      lowerMessage.includes("nguyễn gia đạt")
+      lowerMessage.includes("sơn") ||
+      lowerMessage.includes("chu tiến sơn")
     ) {
-      return "Nguyễn Gia Đạt là một lập trình viên FrontEnd chuyên nghiệp với kinh nghiệm trong việc phát triển ứng dụng web hiện đại. Anh ấy có thế mạnh trong việc kết hợp nghệ thuật và công nghệ để tạo nên những sản phẩm web mang dấu ấn riêng.";
+      return "Chu Tiến Sơn là một lập trình viên FrontEnd chuyên nghiệp với kinh nghiệm trong việc phát triển ứng dụng web hiện đại. Anh ấy có thế mạnh trong việc kết hợp nghệ thuật và công nghệ để tạo nên những sản phẩm web mang dấu ấn riêng.";
     }
 
     if (
@@ -142,7 +142,7 @@ const ChatBot = () => {
       return "Các kỹ năng cần thiết bao gồm: HTML/CSS, JavaScript, React, cơ bản về AI/ML, và quan trọng nhất là tinh thần học hỏi. Chúng tôi sẽ đào tạo từ cơ bản đến nâng cao.";
     }
 
-    // return "Cảm ơn bạn đã hỏi! Tôi có thể giúp bạn tìm hiểu về Nguyễn Gia Đạt, chương trình Ninja AI, quá trình ứng tuyển, và các kỹ năng cần thiết. Bạn có câu hỏi cụ thể nào khác không?";
+    // return "Cảm ơn bạn đã hỏi! Tôi có thể giúp bạn tìm hiểu về Chu Tiến Sơn, chương trình Ninja AI, quá trình ứng tuyển, và các kỹ năng cần thiết. Bạn có câu hỏi cụ thể nào khác không?";
     return "Bạn có thể hỏi câu nào khôn hơn được không???";
   };
 
@@ -174,7 +174,7 @@ const ChatBot = () => {
                 <Sparkles className="w-4 h-4" />
               </div>
               <div>
-                <h3 className="text-center font-semibold">ĐạtGPT</h3>
+                <h3 className="text-center font-semibold">SơnGPT</h3>
                 <p className="text-center text-xs text-white/80">
                   AI Assistant
                 </p>

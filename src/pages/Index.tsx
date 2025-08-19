@@ -101,7 +101,7 @@ const Index = () => {
           <div className="text-center lg:text-left animate-fade-in-left">
             <h1 className="mb-6 leading-tight">
               <span className="block text-center text-xl md:text-4xl lg:text-5xl font-bold text-white -mt-2 lg:-mt-4">
-                Nguyễn Gia Đạt
+                Chu Tiến Sơn
               </span>
 
               <br></br>
@@ -184,7 +184,7 @@ const Index = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-xl border-4 border-white/20">
                 <img
                   src={heroPortrait}
-                  alt="Nguyễn Gia Đạt - Professional Portrait"
+                  alt="Chu Tiến Sơn - Professional Portrait"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -289,7 +289,7 @@ const Index = () => {
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-primary" />
                     <span className="text-foreground">
-                      nguyengiadat2k03@gmail.com
+                      sonchu1610203@gmail.com
                     </span>
                   </div>
                   <div className="flex items-center gap-3">

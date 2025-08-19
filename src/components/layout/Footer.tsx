@@ -26,7 +26,7 @@ const Footer = () => {
                 alt="Logo"
                 className="w-8 h-8 rounded-lg object-cover"
               />
-              <span className="hidden sm:block">Đạt</span>
+              <span className="hidden sm:block">Sơn</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Lập trình viên FrontEnd chuyên nghiệp, kết hợp nghệ thuật và công
@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>nguyengiadat2k03@gmail.com</span>
+                <span>sonchu1610203@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="w-4 h-4" />
@@ -196,7 +196,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-border bg-gray-200 text-center md:text-left">
           <div className="flex flex-col md:flex-row justify-around items-center gap-2 p-4">
             <p className="block text-muted-foreground text-sm">
-              Nguyễn Gia Đạt. Tất cả quyền được bảo lưu.
+              Chu Tiến Sơn. Tất cả quyền được bảo lưu.
             </p>
             <p className="block text-muted-foreground text-sm">
               Thiết kế với ❤️ bởi Ninja AI Team
