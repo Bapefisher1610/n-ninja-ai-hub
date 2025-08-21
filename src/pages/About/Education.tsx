@@ -36,7 +36,7 @@ const Education = () => {
           <div className="relative h-64 md:h-80 group">
             <img
               src={universityCampus}
-              alt="Trường Đại học Kinh tế Kỹ thuật công nghệ Hà Nội"
+              alt="Trường Đại học Mỏ Địa chất Hà Nội"
               className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-500" />
@@ -44,7 +44,7 @@ const Education = () => {
               <div className="animate-fadeInUp">
                 <GraduationCap className="w-16 h-16 mx-auto mb-4 animate-bounce-slow" />
                 <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                  Trường Đại học Kinh tế Kỹ thuật công nghệ Hà Nội
+                  Trường Đại học Mỏ Địa chất Hà Nội
                 </h2>
                 <p className="text-xl">Khoa Công nghệ Thông tin</p>
               </div>
@@ -67,7 +67,7 @@ const Education = () => {
                 {
                   icon: <Users className="w-5 h-5 text-primary" />,
                   title: "Xếp loại",
-                  content: "Khá",
+                  content: "Giỏi",
                 },
               ].map((item, i) => (
                 <div
