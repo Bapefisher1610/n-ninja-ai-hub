@@ -17,7 +17,7 @@ import {
   MapPin,
   Heart,
 } from "lucide-react";
-import heroPortrait from "https://hprnobwbirflkiwscbhd.supabase.co/storage/v1/object/sign/IMage/gmail.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZDVkYzgwMS03NmQwLTRhNTgtODZlMi01YTljMmRjZjNmYTIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJTWFnZS9nbWFpbC5qcGciLCJpYXQiOjE3NTU2MjY4NDAsImV4cCI6MTc1ODIxODg0MH0.F8CXM0JFlqPWRfvFmYHRn63sBhj6USBWAxbDzK35LpE";
+
 import ninjaAIBanner from "@/assets/ninja-ai-banner.jpg";
 
 const Index = () => {
@@ -183,7 +183,7 @@ const Index = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-xl border-4 border-white/20">
                 <img
-                  src={heroPortrait}
+                  src={"https://hprnobwbirflkiwscbhd.supabase.co/storage/v1/object/sign/IMage/gmail.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZDVkYzgwMS03NmQwLTRhNTgtODZlMi01YTljMmRjZjNmYTIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJTWFnZS9nbWFpbC5qcGciLCJpYXQiOjE3NTU2MjcyNzgsImV4cCI6MTc4NzE2MzI3OH0.TAKCIZryhUImlP52U64YOAhgJOUI9-UpBL5AEbwUCm8"}
                   alt="Chu Tiến Sơn - Professional Portrait"
                   className="w-full h-full object-cover"
                 />
