@@ -8,7 +8,7 @@ import {
   Book,
   Users,
 } from "lucide-react";
-import universityCampus from "@/assets/university-campus.jpg";
+
 
 const Education = () => {
   return (
@@ -35,7 +35,7 @@ const Education = () => {
         <Card className="mb-16 overflow-hidden bg-gradient-card border-none shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl animate-slideUp">
           <div className="relative h-64 md:h-80 group">
             <img
-              src={universityCampus}
+              src={"https://hprnobwbirflkiwscbhd.supabase.co/storage/v1/object/sign/IMage/HUMG.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZDVkYzgwMS03NmQwLTRhNTgtODZlMi01YTljMmRjZjNmYTIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJTWFnZS9IVU1HLnBuZyIsImlhdCI6MTc1NTc2Mjg3OSwiZXhwIjoxNzg3Mjk4ODc5fQ.o_WHkytAh7sKYSIOKQHPEWEoTNKLe4a6ekStyPuJTBY"}
               alt="Trường Đại học Mỏ Địa chất Hà Nội"
               className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
             />
@@ -193,9 +193,9 @@ const Education = () => {
               Thông tin liên hệ trường
             </h3>
             <p className="text-gray-200 mb-6">
-              Địa chỉ: 218 Lĩnh Nam, Hoàng Mai, Hà Nội
+              Địa chỉ: 18 Phố Viên, Đông Ngạc, Bắc Từ Liêm, Hà Nội
               <br />
-              Website: www.uneti.edu.vn | Email: info@uneti.edu.vn
+              Website: https://daotao.humg.edu.vn/ | 
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Badge className="px-4 py-2 bg-white/80 text-black hover:scale-105 transition-transform duration-300">
