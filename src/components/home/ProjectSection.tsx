@@ -1,36 +1,36 @@
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { AgriculturalProjectVisual } from "@/components/home/AgriculturalProjectVisual";
-import { AIReceptionistProjectVisual } from "@/components/home/AIReceptionistProjectVisual";
-import { OpenClawProjectVisual } from "@/components/home/OpenClawProjectVisual";
-import { ZaloKnowledgeProjectVisual } from "@/components/home/ZaloKnowledgeProjectVisual";
+import { motion } from "framer-motion";
+import { SectionHeading } from "./SectionHeading";
+import { AgriculturalProjectVisual } from "./AgriculturalProjectVisual";
+import { AIReceptionistProjectVisual } from "./AIReceptionistProjectVisual";
+import { OpenClawProjectVisual } from "./OpenClawProjectVisual";
+import { ZaloKnowledgeProjectVisual } from "./ZaloKnowledgeProjectVisual";
 import { projects } from "@/data/portfolio";
 
-const Projects = () => {
+export const ProjectSection = () => {
   return (
-    <div className="min-h-screen bg-background-secondary py-24">
+    <section
+      id="projects"
+      aria-labelledby="projects-title"
+      className="section-shell bg-background-secondary"
+    >
       <div className="container mx-auto px-4">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-            Case studies
-          </p>
-          <h1 className="font-poppins text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Dự án tiêu biểu
-          </h1>
-          <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Các dự án dưới đây được lấy theo CV AI Engineer, ưu tiên những hệ
-            thống có RAG, AI Agent, automation, webhook/API và cơ chế kiểm soát
-            phản hồi.
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="Case studies"
+          title="Dự án tiêu biểu"
+          description="Các dự án được đóng khung như case study để nhà tuyển dụng nhìn thấy cách Sơn tiếp cận vấn đề, vai trò và hướng giải pháp."
+        />
 
-        <div className="space-y-8">
-          {projects.map((project) => (
-            <Card
+        <div className="mt-12 space-y-8">
+          {projects.map((project, index) => (
+            <motion.article
               key={project.id}
-              className="overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5 }}
+              className="group overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl"
             >
-              <div className="grid lg:grid-cols-[0.46fr_0.54fr]">
+              <div className="grid gap-0 lg:grid-cols-[0.46fr_0.54fr]">
                 {project.id === "agricultural-assistant" ? (
                   <AgriculturalProjectVisual />
                 ) : project.id === "ai-receptionist" ? (
@@ -40,7 +40,7 @@ const Projects = () => {
                 ) : project.id === "zalo-knowledge-chatbot" ? (
                   <ZaloKnowledgeProjectVisual />
                 ) : (
-                  <div className="relative min-h-[240px] bg-slate-950 p-8 text-white">
+                  <div className="relative min-h-[260px] overflow-hidden bg-slate-950 p-8 text-white">
                     <div className="portfolio-project-grid absolute inset-0 opacity-45" />
                     <div className="relative z-10 flex h-full flex-col justify-between">
                       <span className="font-poppins text-7xl font-black text-white/10">
@@ -50,7 +50,7 @@ const Projects = () => {
                         <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">
                           {project.role}
                         </p>
-                        <h2 className="mt-3 text-3xl font-bold">{project.title}</h2>
+                        <h3 className="mt-3 text-3xl font-bold">{project.title}</h3>
                       </div>
                     </div>
                   </div>
@@ -62,7 +62,7 @@ const Projects = () => {
                   </p>
                   <div className="mt-6 grid gap-4 md:grid-cols-2">
                     {[
-                      ["Bài toán", project.problem],
+                      ["Vấn đề", project.problem],
                       ["Giải pháp", project.solution],
                       ["Kết quả", project.result],
                       ["Vai trò", project.role],
@@ -77,21 +77,23 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
+
                   <div className="mt-6 flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary">
+                      <span
+                        key={tech}
+                        className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground"
+                      >
                         {tech}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
                 </div>
               </div>
-            </Card>
+            </motion.article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-
-export default Projects;

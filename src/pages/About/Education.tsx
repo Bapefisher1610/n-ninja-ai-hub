@@ -1,215 +1,90 @@
-import { Card } from "@/components/ui/card";
+import { Award, Calendar, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import {
-  GraduationCap,
-  MapPin,
-  Calendar,
-  Award,
-  Book,
-  Users,
-} from "lucide-react";
+import { Card } from "@/components/ui/card";
 
+const certificates = [
+  { date: "02/12/2024", name: "Google Data Analytics" },
+  { date: "17/03/2024", name: "Microsoft Excel Specialist 2019" },
+  { date: "02/04/2023", name: "Microsoft Word Specialist 2019" },
+];
 
 const Education = () => {
   return (
-    <div className="min-h-screen py-20 bg-green-200 from-emerald-50 to-white">
+    <div className="min-h-screen bg-background-secondary py-24">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fadeIn">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-pulse">
-            Học vấn & Quá trình đào tạo
+        <div className="mx-auto mb-14 max-w-3xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-primary">
+            Education
+          </p>
+          <h1 className="font-poppins text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+            Học vấn và chứng chỉ
           </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Hành trình học tập và phát triển tại những môi trường giáo dục chất
-            lượng cao, nơi đã trang bị cho tôi nền tảng vững chắc về công nghệ
-            thông tin.
-            <br />
-            <br />
-            <span className="text-black font-bold md:text-2xl italic animate-pulse">
-              Học tập để kiến tạo tương lai
-            </span>
+          <p className="mt-5 text-lg leading-8 text-muted-foreground">
+            Thông tin được lấy theo CV AI Engineer. GPA được đặt tại trang học
+            vấn, không đưa lên hero để tránh làm loãng định vị Applied AI.
           </p>
         </div>
 
-        {/* University Section */}
-        <Card className="mb-16 overflow-hidden bg-gradient-card border-none shadow-xl hover:shadow-2xl transition-all duration-500 rounded-2xl animate-slideUp">
-          <div className="relative h-64 md:h-80 group">
-            <img
-              src={"https://hprnobwbirflkiwscbhd.supabase.co/storage/v1/object/sign/IMage/HUMG.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZDVkYzgwMS03NmQwLTRhNTgtODZlMi01YTljMmRjZjNmYTIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJJTWFnZS9IVU1HLnBuZyIsImlhdCI6MTc1NTc2Mjg3OSwiZXhwIjoxNzg3Mjk4ODc5fQ.o_WHkytAh7sKYSIOKQHPEWEoTNKLe4a6ekStyPuJTBY"}
-              alt="Trường Đại học Mỏ Địa chất Hà Nội"
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-500" />
-            <div className="absolute inset-0 flex items-center justify-center text-center text-white">
-              <div className="animate-fadeInUp">
-                <GraduationCap className="w-16 h-16 mx-auto mb-4 animate-bounce-slow" />
-                <h2 className="text-3xl md:text-4xl font-bold mb-2">
-                  Trường Đại học Mỏ Địa chất Hà Nội
+        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <Card className="rounded-[2rem] border border-border bg-card p-8 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                <GraduationCap className="h-7 w-7" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-foreground">
+                  Hanoi University of Mining and Geology
                 </h2>
-                <p className="text-xl">Khoa Công nghệ Thông tin</p>
+                <p className="mt-2 font-semibold text-primary">
+                  Information Technology
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3 text-sm text-muted-foreground">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2">
+                    <Calendar className="h-4 w-4" />
+                    2021 - 2026
+                  </span>
+                  <span className="rounded-full border border-border px-4 py-2">
+                    GPA: 3.17/4.0
+                  </span>
+                </div>
+                <p className="mt-6 leading-8 text-muted-foreground">
+                  Nền tảng học tập liên quan trực tiếp tới lập trình, cơ sở dữ
+                  liệu, AI, backend API và phát triển ứng dụng phục vụ các dự án
+                  RAG chatbot, automation và Computer Vision.
+                </p>
               </div>
             </div>
-          </div>
+          </Card>
 
-          <div className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {[
-                {
-                  icon: <Calendar className="w-5 h-5 text-primary" />,
-                  title: "Thời gian học",
-                  content: "2021 - 2025",
-                },
-                {
-                  icon: <Award className="w-5 h-5 text-primary" />,
-                  title: "Bằng cấp",
-                  content: "Kỹ sư Công nghệ Thông tin",
-                },
-                {
-                  icon: <Users className="w-5 h-5 text-primary" />,
-                  title: "Xếp loại",
-                  content: "Giỏi",
-                },
-              ].map((item, i) => (
+          <Card className="rounded-[2rem] border border-border bg-card p-8 shadow-sm">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+                <Award className="h-6 w-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-foreground">Certificates</h2>
+            </div>
+            <div className="space-y-4">
+              {certificates.map((certificate) => (
                 <div
-                  key={i}
-                  className="flex items-center gap-3 transform hover:scale-105 transition-all duration-300"
+                  key={certificate.name}
+                  className="rounded-2xl border border-border p-4"
                 >
-                  {item.icon}
-                  <div>
-                    <p className="font-semibold text-foreground">
-                      {item.title}
-                    </p>
-                    <p className="text-muted-foreground">{item.content}</p>
-                  </div>
+                  <p className="text-sm font-semibold text-primary">
+                    {certificate.date}
+                  </p>
+                  <p className="mt-1 font-medium text-foreground">
+                    {certificate.name}
+                  </p>
                 </div>
               ))}
             </div>
-
-            <div className="space-y-6">
-              <div className="animate-fadeIn delay-200">
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Tầm nhìn của trường
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Trở thành trường đại học hàng đầu trong khu vực về đào tạo
-                  nguồn nhân lực chất lượng cao trong lĩnh vực kinh tế - kỹ
-                  thuật - công nghệ, đóng góp tích cực vào sự phát triển kinh tế
-                  - xã hội của đất nước.
-                </p>
-              </div>
-
-              <div className="animate-fadeIn delay-400">
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Sứ mệnh
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Đào tạo nguồn nhân lực chất lượng cao có năng lực chuyên môn
-                  vững vàng, tư duy sáng tạo và khả năng thích ứng với môi
-                  trường làm việc quốc tế. Nghiên cứu khoa học và chuyển giao
-                  công nghệ phục vụ sự phát triển bền vững của xã hội.
-                </p>
-              </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <Badge variant="secondary">Data Analytics</Badge>
+              <Badge variant="secondary">Excel</Badge>
+              <Badge variant="secondary">Word</Badge>
             </div>
-          </div>
-        </Card>
-
-        {/* Academic Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {[
-            {
-              icon: <Book className="w-12 h-12 text-primary mx-auto mb-4" />,
-              title: "Môn học chuyên ngành",
-              desc: "Hoàn thành xuất sắc các môn học về lập trình, cơ sở dữ liệu, và phát triển ứng dụng web",
-              badges: [
-                "Lập trình Web",
-                "Cơ sở dữ liệu",
-                "Thuật toán",
-                "Mạng máy tính",
-              ],
-            },
-            {
-              icon: (
-                <Award className="w-12 h-12 text-secondary-dark mx-auto mb-4" />
-              ),
-              title: "Giải thưởng",
-              desc: "Sơn được nhiều thành tích học tập và hoạt động ngoại khóa trong suốt quá trình học tại trường",
-              badges: [
-                "Sinh viên giỏi 4 năm liên tiếp",
-                "Giải nhất cuộc thi lập trình",
-                "Học bổng khuyến khích học tập",
-              ],
-            },
-            {
-              icon: <Users className="w-12 h-12 text-accent mx-auto mb-4" />,
-              title: "Hoạt động ngoại khóa",
-              desc: "Tích cực tham gia các câu lạc bộ, tổ chức và hoạt động xã hội tại trường",
-              badges: [
-                "Chủ tịch CLB Lập trình",
-                "Tình nguyện viên",
-                "Mentor sinh viên",
-              ],
-            },
-          ].map((card, i) => (
-            <Card
-              key={i}
-              className="p-6 text-center card-hover bg-gradient-card border-none rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-500"
-            >
-              <div className="animate-bounce-slow">{card.icon}</div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                {card.title}
-              </h3>
-              <p className="text-muted-foreground mb-4">{card.desc}</p>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {card.badges.map((badge, j) => (
-                  <Badge
-                    key={j}
-                    variant={i === 1 ? "default" : "secondary"}
-                    className="hover:scale-105 transition-transform duration-300"
-                  >
-                    {badge}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-          ))}
+          </Card>
         </div>
-        {/* Contact with University */}
-        <Card
-          className="relative w-full max-w-8xl h-[500px] mx-auto p-12 text-center border-none rounded-2xl shadow-lg overflow-hidden"
-          style={{
-            backgroundImage:
-              "url('https://www.w3schools.com/w3images/map.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          {/* Lớp phủ tối để dễ đọc chữ */}
-          <div className="absolute inset-0 bg-black/50"></div>
-
-          {/* Nội dung */}
-          <div className="relative z-10">
-            <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4 animate-bounce-slow" />
-            <h3 className="text-2xl font-semibold text-white mb-2">
-              Thông tin liên hệ trường
-            </h3>
-            <p className="text-gray-200 mb-6">
-              Địa chỉ: 18 Phố Viên, Đông Ngạc, Bắc Từ Liêm, Hà Nội
-              <br />
-              Website: https://daotao.humg.edu.vn/ | 
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Badge className="px-4 py-2 bg-white/80 text-black hover:scale-105 transition-transform duration-300">
-                Top 100 trường ĐH Việt Nam
-              </Badge>
-              <Badge className="px-4 py-2 bg-white/80 text-black hover:scale-105 transition-transform duration-300">
-                Kiểm định chất lượng AUN-QA
-              </Badge>
-              <Badge className="px-4 py-2 bg-white/80 text-black hover:scale-105 transition-transform duration-300">
-                Hợp tác quốc tế
-              </Badge>
-            </div>
-          </div>
-        </Card>
       </div>
     </div>
   );

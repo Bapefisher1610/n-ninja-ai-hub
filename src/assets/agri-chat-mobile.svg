@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368 548">
+  <rect width="368" height="548" rx="0" fill="#f7faf6"/>
+  <rect width="368" height="62" fill="#2f8554"/>
+  <text x="10" y="24" font-family="Inter, Arial" font-size="16" font-weight="700" fill="#fff">Trợ lý kỹ thuật</text>
+  <circle cx="14" cy="40" r="3" fill="#fff"/>
+  <text x="23" y="44" font-family="Inter, Arial" font-size="12" fill="#fff">Trực tuyến</text>
+  <text x="344" y="33" font-family="Inter, Arial" font-size="28" fill="#fff">×</text>
+  <rect x="10" y="78" width="284" height="84" rx="12" fill="#edf3ee"/>
+  <text x="24" y="104" font-family="Inter, Arial" font-size="14" fill="#26332b">Xin chào! Tôi tư vấn kỹ thuật canh tác</text>
+  <text x="24" y="126" font-family="Inter, Arial" font-size="14" fill="#26332b">cà phê, sầu riêng, lúa dựa trên tài liệu</text>
+  <text x="24" y="148" font-family="Inter, Arial" font-size="14" fill="#26332b">của Hợp Trí. Bạn cần hỏi gì ạ?</text>
+  <rect x="70" y="175" width="272" height="40" rx="13" fill="#2f8554"/>
+  <text x="84" y="201" font-family="Inter, Arial" font-size="14" fill="#fff">bạn có thể hỗ trợ những loại cây nào?</text>
+  <rect x="10" y="227" width="302" height="251" rx="12" fill="#edf3ee"/>
+  <text x="23" y="254" font-family="Inter, Arial" font-size="14" fill="#26332b">Chào Anh/Chị,</text>
+  <text x="23" y="296" font-family="Inter, Arial" font-size="14" fill="#26332b">Hiện tại, Hợp Trí Summit có các giải</text>
+  <text x="23" y="318" font-family="Inter, Arial" font-size="14" fill="#26332b">pháp dinh dưỡng và bảo vệ thực vật</text>
+  <text x="23" y="340" font-family="Inter, Arial" font-size="14" fill="#26332b">cho nhiều loại cây trồng khác nhau.</text>
+  <text x="23" y="362" font-family="Inter, Arial" font-size="14" fill="#26332b">Dựa trên thông tin em có, công ty</text>
+  <text x="23" y="384" font-family="Inter, Arial" font-size="14" fill="#26332b">đang hỗ trợ các loại cây như sầu riêng,</text>
+  <text x="23" y="406" font-family="Inter, Arial" font-size="14" fill="#26332b">xoài, và lúa ạ.</text>
+  <text x="23" y="450" font-family="Inter, Arial" font-size="14" fill="#26332b">Anh/Chị đang quan tâm đến loại cây</text>
+  <text x="23" y="472" font-family="Inter, Arial" font-size="14" fill="#26332b">trồng cụ thể nào ạ?</text>
+  <rect x="6" y="494" width="306" height="42" rx="9" fill="#fff" stroke="#2f8554"/>
+  <text x="20" y="520" font-family="Inter, Arial" font-size="14" fill="#8a928c">Nhập câu hỏi...</text>
+  <rect x="320" y="494" width="42" height="42" rx="10" fill="#2f8554"/>
+  <path d="M333 508l16 7-16 7 4-7z" fill="#fff"/>
+</svg>

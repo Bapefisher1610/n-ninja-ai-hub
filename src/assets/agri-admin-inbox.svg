@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 930">
+  <rect width="1900" height="930" fill="#f5f7f4"/>
+  <path d="M1600 0h300v85l-245 35c-75 11-116-47-85-120z" fill="#e7efe5"/>
+  <g transform="translate(38 22)">
+    <path d="M24 8h22v24l33 48H2l26-48z" fill="#2f8554"/>
+    <circle cx="31" cy="31" r="12" fill="#f59e0b" stroke="#fff" stroke-width="5"/>
+    <rect x="27" y="0" width="26" height="9" fill="#5aa8e8"/>
+    <text x="83" y="28" font-family="Inter, Arial" font-size="24" font-weight="800" fill="#087336">hoptri</text>
+    <text x="83" y="56" font-family="Inter, Arial" font-size="24" font-weight="800" fill="#087336">summit</text>
+  </g>
+  <text x="208" y="28" font-family="Inter, Arial" font-size="12" font-weight="800" fill="#065f46">● TRUNG TÂM PHẢN HỒI MESSENGER</text>
+  <text x="208" y="72" font-family="Inter, Arial" font-size="38" font-weight="800" fill="#0b1215">Admin Inbox</text>
+  <text x="208" y="99" font-family="Inter, Arial" font-size="14" fill="#66756c">Hộp thư chăm sóc khách hàng từ Messenger</text>
+  <rect x="1765" y="42" width="120" height="36" rx="18" fill="#e7f4ec" stroke="#cfe7d8"/>
+  <circle cx="1784" cy="60" r="7" fill="#2f8554"/>
+  <text x="1800" y="64" font-family="Inter, Arial" font-size="13" font-weight="700" fill="#166534">Đã đồng bộ</text>
+  <g font-family="Inter, Arial">
+    <g transform="translate(2 116)"><rect width="468" height="72" rx="16" fill="#fff" stroke="#d9e4dc"/><rect width="4" height="46" x="9" y="13" rx="2" fill="#2f8554"/><text x="27" y="27" font-size="13" font-weight="700" fill="#53645a">Tổng hội thoại</text><text x="27" y="57" font-size="25" font-weight="800">0</text></g>
+    <g transform="translate(482 116)"><rect width="460" height="72" rx="16" fill="#fff" stroke="#d9e4dc"/><rect width="4" height="46" x="0" y="13" rx="2" fill="#f59e0b"/><text x="18" y="27" font-size="13" font-weight="700" fill="#53645a">Chờ xử lý</text><text x="18" y="57" font-size="25" font-weight="800">0</text></g>
+    <g transform="translate(956 116)"><rect width="458" height="72" rx="16" fill="#fff" stroke="#d9e4dc"/><rect width="4" height="46" x="0" y="13" rx="2" fill="#2f8554"/><text x="18" y="27" font-size="13" font-weight="700" fill="#53645a">Đã phản hồi</text><text x="18" y="57" font-size="25" font-weight="800">0</text></g>
+    <g transform="translate(1428 116)"><rect width="458" height="72" rx="16" fill="#fff" stroke="#d9e4dc"/><rect width="4" height="46" x="0" y="13" rx="2" fill="#60a5fa"/><text x="18" y="27" font-size="13" font-weight="700" fill="#53645a">Lần cập nhật</text><text x="18" y="57" font-size="25" font-weight="800">16:38</text></g>
+  </g>
+  <rect x="2" y="218" width="368" height="708" rx="16" fill="#fff" stroke="#d9e4dc"/>
+  <text x="17" y="253" font-family="Inter, Arial" font-size="17" font-weight="800" fill="#0b1215">Hội thoại</text>
+  <rect x="17" y="271" width="340" height="42" rx="13" fill="#fff" stroke="#d9e4dc"/>
+  <text x="58" y="299" font-family="Inter, Arial" font-size="16" fill="#66756c">Tìm PSID hoặc nội dung</text>
+  <rect x="17" y="323" width="109" height="36" rx="11" fill="#2f8554"/><text x="53" y="346" font-family="Inter, Arial" font-size="13" font-weight="800" fill="#fff">Tất cả</text>
+  <rect x="132" y="323" width="109" height="36" rx="11" fill="#f1f4f1"/><text x="160" y="346" font-family="Inter, Arial" font-size="13" font-weight="800" fill="#66756c">Chờ xử lý</text>
+  <rect x="248" y="323" width="109" height="36" rx="11" fill="#f1f4f1"/><text x="275" y="346" font-family="Inter, Arial" font-size="13" font-weight="800" fill="#66756c">Đã phản hồi</text>
+  <circle cx="187" cy="421" r="32" fill="#e7f4ec"/><path d="M174 414c0-7 7-11 15-11 9 0 16 5 16 12 0 8-7 13-17 13l-13 8 3-10c-3-3-4-7-4-12z" fill="none" stroke="#2f8554" stroke-width="3"/>
+  <text x="115" y="498" font-family="Inter, Arial" font-size="16" font-weight="800">Không có hội thoại</text>
+  <text x="18" y="527" font-family="Inter, Arial" font-size="16" fill="#53645a">Thử đổi bộ lọc, tìm kiếm khác hoặc chờ tin nhắn</text>
+  <text x="149" y="550" font-family="Inter, Arial" font-size="16" fill="#53645a">mới.</text>
+  <rect x="386" y="218" width="1508" height="708" rx="16" fill="#fff" stroke="#d9e4dc"/>
+  <rect x="386" y="303" width="1508" height="550" fill="#fbfcfa"/>
+  <rect x="400" y="232" width="60" height="58" rx="12" fill="#fff" stroke="#e2e8e5"/>
+  <text x="472" y="259" font-family="Inter, Arial" font-size="17" font-weight="800">Chưa chọn hội thoại</text>
+  <text x="472" y="279" font-family="Inter, Arial" font-size="12" fill="#66756c">Chọn một hội thoại bên trái để xem lịch sử trao đổi</text>
+  <circle cx="1140" cy="528" r="32" fill="#e7f4ec"/>
+  <path d="M1126 521c0-7 7-11 15-11 9 0 16 5 16 12 0 8-7 13-17 13l-13 8 3-10c-3-3-4-7-4-12z" fill="none" stroke="#2f8554" stroke-width="3"/>
+  <text x="1035" y="603" font-family="Inter, Arial" font-size="16" font-weight="800">Sẵn sàng hỗ trợ khách hàng</text>
+  <text x="980" y="633" font-family="Inter, Arial" font-size="16" fill="#53645a">Chọn một hội thoại bên trái để xem lịch sử và</text>
+  <text x="1066" y="657" font-family="Inter, Arial" font-size="16" fill="#53645a">phản hồi nhanh hơn.</text>
+  <rect x="400" y="866" width="1344" height="48" rx="13" fill="#f8faf8" stroke="#d9e4dc"/>
+  <text x="416" y="897" font-family="Inter, Arial" font-size="16" fill="#66756c">Nhập phản hồi cho khách hàng...</text>
+  <rect x="1754" y="866" width="126" height="48" rx="13" fill="#b6c4ba"/>
+  <text x="1790" y="897" font-family="Inter, Arial" font-size="16" font-weight="800" fill="#fff">Gửi</text>
+</svg>

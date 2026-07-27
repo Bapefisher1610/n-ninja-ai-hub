@@ -21,6 +21,8 @@ export default {
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
+				'manrope': ['Manrope', 'sans-serif'],
+				'vietnam': ['Be Vietnam Pro', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

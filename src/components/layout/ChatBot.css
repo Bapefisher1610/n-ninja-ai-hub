@@ -1,8 +1,4 @@
-/* Animation delay classes for typing indicators */
-.animate-bounce-delay-1 {
-  animation-delay: 0.1s;
-}
-
-.animate-bounce-delay-2 {
-  animation-delay: 0.2s;
+.chatbot-window {
+  width: min(410px, calc(100vw - 24px));
+  height: min(560px, calc(100vh - 96px));
 }
