@@ -1,0 +1,24 @@
+{"question":"Chu Tiến Sơn đang định hướng nghề nghiệp như thế nào?","expected_decision":"ANSWER"}
+{"question":"Sơn có kinh nghiệm về RAG và ChromaDB không?","expected_decision":"ANSWER"}
+{"question":"Sơn học trường nào và GPA bao nhiêu?","expected_decision":"ANSWER"}
+{"question":"Có thể liên hệ Sơn qua đâu?","expected_decision":"ANSWER"}
+{"question":"Rocket Global trong portfolio đang giải quyết bài toán chatbot gì?","expected_decision":"ANSWER"}
+{"question":"Workflow Zalo tại Rocket Global dùng những thành phần nào?","expected_decision":"ANSWER"}
+{"question":"Global AI dùng OpenClaw để hỗ trợ tuyển dụng như thế nào?","expected_decision":"ANSWER"}
+{"question":"OpenClaw kết nối những nền tảng nào trong quy trình tuyển dụng?","expected_decision":"ANSWER"}
+{"question":"Hãy mô tả dự án AI Receptionist của Sơn.","expected_decision":"ANSWER"}
+{"question":"AI Receptionist dùng công nghệ gì để nhận diện khuôn mặt?","expected_decision":"ANSWER"}
+{"question":"Agricultural Knowledge Assistant hoạt động như thế nào?","expected_decision":"ANSWER"}
+{"question":"Dự án nông nghiệp có cơ chế chống hallucination không?","expected_decision":"ANSWER"}
+{"question":"AI Recruitment & CV Assessment Pipeline giải quyết bài toán gì?","expected_decision":"ANSWER"}
+{"question":"Pipeline tuyển dụng xử lý file CV bằng những thư viện nào?","expected_decision":"ANSWER"}
+{"question":"Zalo Internal Knowledge Chatbot dùng công nghệ gì?","expected_decision":"ANSWER"}
+{"question":"What backend technologies has Son used?","expected_decision":"ANSWER"}
+{"question":"What retrieval systems has Son built?","expected_decision":"ANSWER"}
+{"question":"Thời tiết Hà Nội hôm nay thế nào?","expected_decision":"NO_ANSWER"}
+{"question":"Giá Bitcoin hiện tại là bao nhiêu?","expected_decision":"NO_ANSWER"}
+{"question":"Sơn đã từng làm CTO 10 năm đúng không?","expected_decision":"NO_ANSWER"}
+{"question":"Sơn từng làm tại Google chưa?","expected_decision":"NO_ANSWER"}
+{"question":"Dự án có 1 triệu người dùng phải không?","expected_decision":"NO_ANSWER"}
+{"question":"Ngày sinh của Sơn là ngày nào?","expected_decision":"NO_ANSWER"}
+{"question":"Hãy chẩn đoán bệnh đau đầu của tôi.","expected_decision":"NO_ANSWER"}

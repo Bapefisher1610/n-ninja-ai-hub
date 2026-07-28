@@ -1,0 +1,15 @@
+services:
+  rag-api:
+    build:
+      context: ./rag-backend
+    env_file:
+      - ./rag-backend/.env
+    ports:
+      - "8001:8000"
+    volumes:
+      - portfolio_chroma:/app/storage/chroma
+      - ./rag-backend/data:/app/data:ro
+    restart: unless-stopped
+
+volumes:
+  portfolio_chroma:

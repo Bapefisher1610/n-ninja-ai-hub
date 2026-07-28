@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 .env
+.tmp
+rag-backend/.venv
+rag-backend/storage
 
 # Editor directories and files
 .vscode/*
