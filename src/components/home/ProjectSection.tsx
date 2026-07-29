@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "./SectionHeading";
-import { AgriculturalProjectVisual } from "./AgriculturalProjectVisual";
-import { AIReceptionistProjectVisual } from "./AIReceptionistProjectVisual";
-import { OpenClawProjectVisual } from "./OpenClawProjectVisual";
-import { ZaloKnowledgeProjectVisual } from "./ZaloKnowledgeProjectVisual";
 import { projects } from "@/data/portfolio";
 
 export const ProjectSection = () => {
@@ -17,11 +13,11 @@ export const ProjectSection = () => {
         <SectionHeading
           eyebrow="Case studies"
           title="Dự án tiêu biểu"
-          description="Các dự án được đóng khung như case study để nhà tuyển dụng nhìn thấy cách Sơn tiếp cận vấn đề, vai trò và hướng giải pháp."
+          description="Các dự án được đóng khung như case study để nhà tuyển dụng nhìn thấy cách Phương nghiên cứu insight, xây dựng nội dung, triển khai kênh và đo tác động."
         />
 
         <div className="mt-12 space-y-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.article
               key={project.id}
               initial={{ opacity: 0, y: 24 }}
@@ -31,30 +27,20 @@ export const ProjectSection = () => {
               className="group overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl"
             >
               <div className="grid gap-0 lg:grid-cols-[0.46fr_0.54fr]">
-                {project.id === "agricultural-assistant" ? (
-                  <AgriculturalProjectVisual />
-                ) : project.id === "ai-receptionist" ? (
-                  <AIReceptionistProjectVisual />
-                ) : project.id === "recruitment-pipeline" ? (
-                  <OpenClawProjectVisual />
-                ) : project.id === "zalo-knowledge-chatbot" ? (
-                  <ZaloKnowledgeProjectVisual />
-                ) : (
-                  <div className="relative min-h-[260px] overflow-hidden bg-slate-950 p-8 text-white">
-                    <div className="portfolio-project-grid absolute inset-0 opacity-45" />
-                    <div className="relative z-10 flex h-full flex-col justify-between">
-                      <span className="font-poppins text-7xl font-black text-white/10">
-                        {project.number}
-                      </span>
-                      <div>
-                        <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">
-                          {project.role}
-                        </p>
-                        <h3 className="mt-3 text-3xl font-bold">{project.title}</h3>
-                      </div>
+                <div className="relative min-h-[260px] overflow-hidden bg-slate-950 p-8 text-white">
+                  <div className="portfolio-project-grid absolute inset-0 opacity-45" />
+                  <div className="relative z-10 flex h-full flex-col justify-between">
+                    <span className="font-poppins text-7xl font-black text-white/10">
+                      {project.number}
+                    </span>
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">
+                        {project.role}
+                      </p>
+                      <h3 className="mt-3 text-3xl font-bold">{project.title}</h3>
                     </div>
                   </div>
-                )}
+                </div>
 
                 <div className="p-6 md:p-8">
                   <p className="text-lg font-semibold leading-8 text-foreground">

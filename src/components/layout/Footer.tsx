@@ -2,7 +2,6 @@ import { ArrowUp, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { navigation, personalInfo, socialLinks } from "@/data/portfolio";
-import logoImage from "@/assets/ninjaai.png";
 
 const Footer = () => {
   const enabledSocials = Object.entries(socialLinks).filter(
@@ -15,13 +14,9 @@ const Footer = () => {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
             <Link to="/" className="inline-flex items-center gap-3">
-              <img
-                src={logoImage}
-                alt=""
-                width={40}
-                height={40}
-                className="h-10 w-10 rounded-2xl object-cover"
-              />
+              <span className="grid h-10 w-10 place-items-center rounded-2xl bg-primary text-sm font-black text-primary-foreground">
+                {personalInfo.shortName.slice(0, 1)}
+              </span>
               <div>
                 <p className="font-poppins font-bold text-foreground">
                   {personalInfo.name}
@@ -30,8 +25,8 @@ const Footer = () => {
               </div>
             </Link>
             <p className="mt-5 max-w-md text-sm leading-7 text-muted-foreground">
-              Portfolio cá nhân tập trung vào AI application, full-stack web và
-              tự động hóa quy trình doanh nghiệp.
+              Portfolio cá nhân tập trung vào Content Marketing, branding, social media,
+              insight khách hàng và ứng dụng AI tools vào quy trình marketing thực tế.
             </p>
             <div className="mt-5 grid gap-2 text-sm text-muted-foreground">
               <a href={socialLinks.email.url} className="inline-flex items-center gap-2 hover:text-primary">

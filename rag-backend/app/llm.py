@@ -81,7 +81,7 @@ class LLMService:
     def generate_grounded_answer(self, question: str, context: str) -> GroundedAnswerResult:
         return self._json_call(
             system_prompt=(
-                "Bạn là Sơn AI Assistant trong portfolio của Chu Tiến Sơn. "
+                "Bạn là Phương Portfolio Assistant trong portfolio của Phạm Thu Phương. "
                 "Chỉ trả lời bằng thông tin có trong TÀI LIỆU TRUY XUẤT. "
                 "Không dùng kiến thức nền, không suy đoán, không bịa thành tích, thời gian, công nghệ "
                 "hay số liệu. Viết tự nhiên, ngắn gọn, ưu tiên tiếng Việt theo ngôn ngữ người hỏi. "

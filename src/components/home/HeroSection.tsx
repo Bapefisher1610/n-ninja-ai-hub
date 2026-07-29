@@ -2,7 +2,7 @@ import { ArrowDown, ArrowRight, Download, Mail } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { evidenceItems, personalInfo, socialLinks, techBadges } from "@/data/portfolio";
-import heroPortrait from "@/assets/Avatar.png";
+import ptpPortrait from "@/assets/ptp-portrait.png";
 
 const container = {
   hidden: { opacity: 0 },
@@ -53,10 +53,10 @@ export const HeroSection = () => {
           <motion.h1
             id="home-title"
             variants={item}
-            className="text-balance font-vietnam text-[clamp(2.45rem,5.75vw,5.45rem)] font-extrabold leading-[1.12] text-foreground"
+            className="text-balance font-vietnam text-[clamp(2.5rem,5.8vw,5.6rem)] font-black leading-[1.08] text-foreground"
           >
             Xin chào, tôi là{" "}
-            <span className="portfolio-name-gradient block pt-2 font-extrabold">
+            <span className="portfolio-name-gradient block pt-2 font-black">
               {personalInfo.name}.
             </span>
           </motion.h1>
@@ -75,10 +75,7 @@ export const HeroSection = () => {
             {personalInfo.summary}
           </motion.p>
 
-          <motion.div
-            variants={item}
-            className="mt-8 flex flex-col gap-3 sm:flex-row"
-          >
+          <motion.div variants={item} className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               size="lg"
               onClick={scrollToProjects}
@@ -100,13 +97,7 @@ export const HeroSection = () => {
                 </a>
               </Button>
             ) : (
-              <Button
-                size="lg"
-                variant="outline"
-                disabled
-                className="min-h-11 rounded-full border-primary/30 px-6"
-                title="TODO: Thêm file CV thật vào public/cv/chu-tien-son-cv.pdf"
-              >
+              <Button size="lg" variant="outline" disabled className="min-h-11 rounded-full px-6">
                 <Download className="mr-2 h-4 w-4" />
                 Tải CV
               </Button>
@@ -168,30 +159,29 @@ export const HeroSection = () => {
           className="relative mx-auto w-full max-w-[440px] lg:mr-0"
         >
           <div className="absolute -inset-8 -z-10 rounded-[3rem] bg-primary/10 blur-3xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/20 bg-card shadow-xl">
-            <img
-              src={heroPortrait}
-              alt="Chân dung Chu Tiến Sơn"
-              width={640}
-              height={780}
-              className="aspect-[4/5] w-full object-cover"
-              loading="eager"
-            />
-            <div className="absolute inset-x-4 bottom-4 rounded-3xl border border-white/20 bg-slate-950/72 p-4 text-white backdrop-blur">
-              <p className="text-xs uppercase tracking-[0.22em] text-emerald-200">
-                Workbench
-              </p>
-              <p className="mt-1 text-sm leading-6 text-white/85">
-                AI, dữ liệu và workflow được đặt chung trong một luồng sản phẩm.
-              </p>
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/20 bg-card p-3 shadow-xl md:p-4">
+            <div className="relative overflow-hidden rounded-[1.65rem] border border-border bg-slate-950">
+              <img
+                src={ptpPortrait}
+                alt={`Chân dung ${personalInfo.name}`}
+                width={1024}
+                height={1792}
+                className="h-auto max-h-[620px] w-full object-contain"
+                loading="eager"
+              />
+              <div className="absolute inset-x-4 bottom-4 rounded-3xl border border-white/20 bg-slate-950/72 p-4 text-white shadow-2xl backdrop-blur">
+                <p className="text-xs uppercase tracking-[0.22em] text-emerald-200">
+                  Content Marketing
+                </p>
+                <p className="mt-1 text-sm leading-6 text-white/85">
+                  Brand story, insight và AI workflow được đặt chung trong một luồng marketing.
+                </p>
+              </div>
             </div>
           </div>
 
           <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {techBadges
-              .filter((badge) => badge.label !== "Computer Vision")
-              .slice(0, 6)
-              .map((badge, index) => {
+            {techBadges.slice(0, 6).map((badge, index) => {
               const Icon = badge.icon;
               return (
                 <motion.div

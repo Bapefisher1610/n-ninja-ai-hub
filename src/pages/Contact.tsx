@@ -1,245 +1,105 @@
-import { useState, useEffect } from "react";
-import { Card } from "@/components/ui/card";
+import { useEffect } from "react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, MessageCircle, Calendar } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Card } from "@/components/ui/card";
+import { personalInfo, socialLinks } from "@/data/portfolio";
+
+const contactItems = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: personalInfo.email,
+    href: socialLinks.email.url,
+  },
+  {
+    icon: Phone,
+    label: "Điện thoại",
+    value: personalInfo.phone,
+    href: `tel:${personalInfo.phone}`,
+  },
+  {
+    icon: MapPin,
+    label: "Khu vực",
+    value: personalInfo.location,
+    href: null,
+  },
+];
 
 const Contact = () => {
-  const { toast } = useToast();
-
-  // Cuộn về đầu trang khi component load
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Tin nhắn đã được gửi!",
-      description: "Tôi sẽ phản hồi bạn trong thời gian sớm nhất.",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
-  };
-
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen bg-background-secondary py-24">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Liên hệ với tôi
+        <div className="mx-auto mb-14 max-w-3xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-primary">
+            Contact
+          </p>
+          <h1 className="font-poppins text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+            Liên hệ với Phạm Thu Phương
           </h1>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Tôi luôn sẵn sàng lắng nghe và trao đổi về các dự án, cơ hội hợp tác 
-            hoặc đơn giản là chia sẻ về công nghệ. Hãy liên hệ với tôi!
+          <p className="mt-5 text-lg leading-8 text-muted-foreground">
+            Phương sẵn sàng trao đổi về cơ hội Content Marketing, Branding, Social Media và các dự án cần kết hợp AI tools trong quy trình nội dung.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <Card className="p-6 bg-gradient-card border-none card-hover">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center text-white">
-                  <Mail className="w-6 h-6" />
+        <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-3">
+          {contactItems.map((item) => {
+            const Icon = item.icon;
+            const content = (
+              <Card className="h-full rounded-3xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <Icon className="h-6 w-6" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Email</h3>
-                  <p className="text-muted-foreground">dat.nguyen@example.com</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Phương thức liên hệ chính. Tôi thường phản hồi trong vòng 24 giờ.
-              </p>
-            </Card>
-
-            <Card className="p-6 bg-gradient-card border-none card-hover">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center text-white">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Điện thoại</h3>
-                  <p className="text-muted-foreground">+84 123 456 789</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Có thể liên hệ qua Zalo hoặc WhatsApp cho các vấn đề khẩn cấp.
-              </p>
-            </Card>
-
-            <Card className="p-6 bg-gradient-card border-none card-hover">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center text-secondary-dark">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground">Địa chỉ</h3>
-                  <p className="text-muted-foreground">Hà Nội, Việt Nam</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                Có thể hẹn gặp trực tiếp tại các quán cafe hoặc coworking space.
-              </p>
-            </Card>
-
-            <Card className="p-6 bg-gradient-hero border-none">
-              <div className="text-center">
-                <Calendar className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">Đặt lịch hẹn</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Muốn trao đổi trực tiếp? Hãy đặt lịch meeting với tôi.
+                <p className="mt-5 text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                  {item.label}
                 </p>
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                  Chọn thời gian phù hợp
-                </Button>
+                <p className="mt-2 break-words text-lg font-bold text-foreground">
+                  {item.value}
+                </p>
+              </Card>
+            );
+
+            return item.href ? (
+              <a key={item.label} href={item.href}>
+                {content}
+              </a>
+            ) : (
+              <div key={item.label}>{content}</div>
+            );
+          })}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-[2rem] border border-border bg-card shadow-xl">
+          <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="bg-slate-950 p-8 text-white md:p-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-200">
+                Quick note
+              </p>
+              <h2 className="mt-4 text-3xl font-bold leading-tight">
+                Một email rõ brief sẽ giúp bắt đầu nhanh hơn.
+              </h2>
+              <p className="mt-5 leading-8 text-white/75">
+                Có thể gửi ngắn gọn về vị trí, mục tiêu nội dung, kênh truyền thông và kỳ vọng tăng trưởng. Phương sẽ phản hồi qua email hoặc số điện thoại trong CV.
+              </p>
+            </div>
+
+            <div className="p-8 md:p-10">
+              <h3 className="text-2xl font-bold text-foreground">Gợi ý nội dung email</h3>
+              <div className="mt-6 space-y-4 text-sm leading-7 text-muted-foreground">
+                <p>Vị trí hoặc dự án cần trao đổi.</p>
+                <p>Kênh chính: TikTok, Facebook, website, cộng đồng hoặc tuyển dụng.</p>
+                <p>Mục tiêu: tăng nhận diện, tuyển sinh, tuyển dụng, chuyển đổi hoặc xây dựng thương hiệu cá nhân/doanh nghiệp.</p>
               </div>
-            </Card>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="p-8 bg-gradient-card border-none shadow-lg">
-              <div className="flex items-center gap-3 mb-6">
-                <MessageCircle className="w-6 h-6 text-primary" />
-                <h2 className="text-2xl font-bold text-foreground">Gửi tin nhắn</h2>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Họ và tên *
-                    </label>
-                    <Input
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Nguyễn Văn A"
-                      required
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
-                      Email *
-                    </label>
-                    <Input
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="your.email@example.com"
-                      required
-                      className="w-full"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Tiêu đề *
-                  </label>
-                  <Input
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    placeholder="Chủ đề bạn muốn trao đổi"
-                    required
-                    className="w-full"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
-                    Nội dung tin nhắn *
-                  </label>
-                  <Textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Chia sẻ chi tiết về những gì bạn muốn trao đổi..."
-                    rows={6}
-                    required
-                    className="w-full resize-none"
-                  />
-                </div>
-
-                <Button 
-                  type="submit"
-                  size="lg"
-                  className="w-full md:w-auto bg-gradient-primary text-white hover:bg-primary-dark btn-scale btn-ripple shadow-green"
-                >
-                  Gửi tin nhắn
-                  <Send className="w-5 h-5 ml-2" />
-                </Button>
-              </form>
-
-              <div className="mt-8 p-4 bg-secondary/10 rounded-lg">
-                <h3 className="font-semibold text-foreground mb-2">Thời gian phản hồi</h3>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li>• Email thông thường: 24-48 giờ</li>
-                  <li>• Dự án khẩn cấp: Trong vòng 12 giờ</li>
-                  <li>• Cuối tuần: Phản hồi vào thứ 2</li>
-                </ul>
-              </div>
-            </Card>
-
-            {/* FAQ Section */}
-            <Card className="mt-8 p-8 bg-gradient-card border-none">
-              <h3 className="text-xl font-bold text-foreground mb-6">Câu hỏi thường gặp</h3>
-              
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">
-                    Bạn có nhận làm dự án freelance không?
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    Có, tôi nhận các dự án phù hợp với lịch trình. Hãy chia sẻ chi tiết dự án để tôi có thể tư vấn tốt nhất.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">
-                    Làm thế nào để tham gia chương trình Ninja AI?
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    Bạn có thể đăng ký tại trang Ninja AI hoặc liên hệ trực tiếp với tôi để được tư vấn chi tiết.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">
-                    Bạn có nhận mentor cá nhân không?
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    Tùy vào thời gian và mức độ phù hợp. Hãy liên hệ để thảo luận về nhu cầu học tập của bạn.
-                  </p>
-                </div>
-              </div>
-            </Card>
+              <Button asChild className="mt-8 rounded-full bg-primary px-6 text-primary-foreground">
+                <a href={socialLinks.email.url}>
+                  Gửi email
+                  <Send className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

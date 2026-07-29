@@ -4,7 +4,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { navigation, personalInfo } from "@/data/portfolio";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
-import logoImage from "@/assets/ninjaai.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -77,17 +76,13 @@ const Header = () => {
           <Link
             to="/"
             className="flex items-center gap-3 rounded-full pr-2 text-foreground transition hover:text-primary"
-            aria-label="Về trang chủ portfolio của Chu Tiến Sơn"
+            aria-label={`Về trang chủ portfolio của ${personalInfo.name}`}
           >
-            <img
-              src={logoImage}
-              alt=""
-              className="h-10 w-10 rounded-2xl object-cover"
-              width={40}
-              height={40}
-            />
+            <span className="grid h-10 w-10 place-items-center rounded-2xl bg-primary text-sm font-black text-primary-foreground">
+              {personalInfo.shortName.slice(0, 1)}
+            </span>
             <span className="hidden font-poppins text-base font-bold sm:block">
-              Chu Tiến Sơn
+              {personalInfo.name}
             </span>
           </Link>
 
@@ -124,7 +119,7 @@ const Header = () => {
               <Button
                 disabled
                 className="hidden rounded-full bg-primary px-5 text-primary-foreground sm:inline-flex"
-                title="TODO: Thêm CV thật vào public/cv/chu-tien-son-cv.pdf"
+                title="Thêm CV vào thư mục public/cv"
               >
                 <Download className="mr-2 h-4 w-4" />
                 CV

@@ -1,9 +1,5 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { AgriculturalProjectVisual } from "@/components/home/AgriculturalProjectVisual";
-import { AIReceptionistProjectVisual } from "@/components/home/AIReceptionistProjectVisual";
-import { OpenClawProjectVisual } from "@/components/home/OpenClawProjectVisual";
-import { ZaloKnowledgeProjectVisual } from "@/components/home/ZaloKnowledgeProjectVisual";
 import { projects } from "@/data/portfolio";
 
 const Projects = () => {
@@ -18,9 +14,7 @@ const Projects = () => {
             Dự án tiêu biểu
           </h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Các dự án dưới đây được lấy theo CV AI Engineer, ưu tiên những hệ
-            thống có RAG, AI Agent, automation, webhook/API và cơ chế kiểm soát
-            phản hồi.
+            Các dự án được lấy theo CV Content Marketing, ưu tiên branding, social media, nghiên cứu insight, triển khai chiến dịch và ứng dụng AI/automation vào vận hành marketing.
           </p>
         </div>
 
@@ -31,30 +25,20 @@ const Projects = () => {
               className="overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm"
             >
               <div className="grid lg:grid-cols-[0.46fr_0.54fr]">
-                {project.id === "agricultural-assistant" ? (
-                  <AgriculturalProjectVisual />
-                ) : project.id === "ai-receptionist" ? (
-                  <AIReceptionistProjectVisual />
-                ) : project.id === "recruitment-pipeline" ? (
-                  <OpenClawProjectVisual />
-                ) : project.id === "zalo-knowledge-chatbot" ? (
-                  <ZaloKnowledgeProjectVisual />
-                ) : (
-                  <div className="relative min-h-[240px] bg-slate-950 p-8 text-white">
-                    <div className="portfolio-project-grid absolute inset-0 opacity-45" />
-                    <div className="relative z-10 flex h-full flex-col justify-between">
-                      <span className="font-poppins text-7xl font-black text-white/10">
-                        {project.number}
-                      </span>
-                      <div>
-                        <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">
-                          {project.role}
-                        </p>
-                        <h2 className="mt-3 text-3xl font-bold">{project.title}</h2>
-                      </div>
+                <div className="relative min-h-[240px] bg-slate-950 p-8 text-white">
+                  <div className="portfolio-project-grid absolute inset-0 opacity-45" />
+                  <div className="relative z-10 flex h-full flex-col justify-between">
+                    <span className="font-poppins text-7xl font-black text-white/10">
+                      {project.number}
+                    </span>
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.2em] text-emerald-200">
+                        {project.role}
+                      </p>
+                      <h2 className="mt-3 text-3xl font-bold">{project.title}</h2>
                     </div>
                   </div>
-                )}
+                </div>
 
                 <div className="p-6 md:p-8">
                   <p className="text-lg font-semibold leading-8 text-foreground">

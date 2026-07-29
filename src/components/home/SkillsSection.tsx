@@ -29,9 +29,9 @@ export const SkillsSection = () => {
     >
       <div className="container mx-auto px-4">
         <SectionHeading
-          eyebrow="Tech stack"
-          title="Năng lực và công nghệ"
-          description="Không dùng progress bar phần trăm. Các nhóm kỹ năng được đặt theo phạm vi công việc thật: từ UI, API, AI đến workflow doanh nghiệp."
+          eyebrow="Skill stack"
+          title="Năng lực và công cụ"
+          description="Các nhóm kỹ năng được đặt theo phạm vi công việc thật: từ content, branding, insight đến AI tools và automation."
           align="center"
         />
 
@@ -167,7 +167,6 @@ const SkillCylinderCard = ({
           </span>
         ))}
       </div>
-
     </article>
   );
 };

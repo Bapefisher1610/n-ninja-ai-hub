@@ -45,8 +45,8 @@ export const ExperienceSection = () => {
         <div className="relative">
           <SectionHeading
             eyebrow="Kinh nghiệm"
-            title="Kinh nghiệm tạo ra sản phẩm thực tế"
-            description="Các mảng công việc được trình bày theo bài toán, giải pháp và tác động thay vì chỉ liệt kê trách nhiệm."
+            title="Kinh nghiệm tạo tác động truyền thông"
+            description="Các mảng công việc được trình bày theo bài toán, giải pháp và tác động để thấy rõ cách Phương triển khai nội dung, kênh và chiến dịch."
             align="center"
           />
         </div>

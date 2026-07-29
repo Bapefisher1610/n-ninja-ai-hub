@@ -8,14 +8,13 @@ const Skills = () => {
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-            Technical expertise
+            Professional stack
           </p>
           <h1 className="font-poppins text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            Năng lực AI Engineering
+            Năng lực Content Marketing
           </h1>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
-            Skills được nhóm theo năng lực giải quyết vấn đề trong CV, không
-            dùng phần trăm vì khó chứng minh và dễ làm loãng định vị.
+            Kỹ năng được nhóm theo cách Phương tạo giá trị trong công việc: nghiên cứu insight, xây dựng câu chuyện thương hiệu, sản xuất nội dung và dùng AI để tăng tốc workflow.
           </p>
         </div>
 

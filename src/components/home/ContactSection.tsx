@@ -1,4 +1,4 @@
-import { Download, Mail, MapPin } from "lucide-react";
+import { Download, Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "./SectionHeading";
 import { personalInfo, socialLinks } from "@/data/portfolio";
@@ -17,19 +17,18 @@ export const ContactSection = () => {
                 id="contact-title"
                 className="mt-4 max-w-xl font-poppins text-3xl font-bold leading-tight md:text-5xl"
               >
-                Cùng xây dựng một sản phẩm có giá trị.
+                Sẵn sàng trao đổi về content, thương hiệu và tăng trưởng kênh.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-white/75">
-                Tôi sẵn sàng trao đổi về cơ hội làm việc, dự án AI, ứng dụng web
-                và tự động hóa quy trình.
+                Phương phù hợp với các vai trò Content Marketing, Branding, Social Media và các dự án cần kết hợp AI tools để tối ưu quy trình nội dung.
               </p>
             </div>
 
             <div className="p-8 md:p-10">
               <SectionHeading
                 eyebrow="Trao đổi"
-                title="Gửi email là cách chắc chắn nhất để bắt đầu."
-                description="Form liên hệ sẽ được thêm khi có backend xử lý thật. Hiện tại các CTA ưu tiên email và CV đã xác thực."
+                title="Email hoặc gọi trực tiếp là cách nhanh nhất để bắt đầu."
+                description="Thông tin liên hệ được cập nhật theo CV. Nút tải CV trỏ tới file CV mới trong thư mục public/cv."
               />
 
               <div className="mt-8 grid gap-4">
@@ -39,6 +38,13 @@ export const ContactSection = () => {
                 >
                   <Mail className="h-5 w-5" />
                   {personalInfo.email}
+                </a>
+                <a
+                  href={`tel:${personalInfo.phone}`}
+                  className="flex items-center gap-3 rounded-2xl border border-border p-4 text-foreground transition hover:border-primary/40 hover:text-primary"
+                >
+                  <Phone className="h-5 w-5" />
+                  {personalInfo.phone}
                 </a>
                 <div className="flex items-center gap-3 rounded-2xl border border-border p-4 text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
@@ -51,13 +57,15 @@ export const ContactSection = () => {
                   <a href={socialLinks.email.url}>Gửi email</a>
                 </Button>
                 <Button
+                  asChild
                   variant="outline"
                   disabled={!personalInfo.cv.enabled}
                   className="min-h-11 rounded-full px-6"
-                  title="TODO: Thêm file CV thật trước khi bật nút tải CV"
                 >
-                  <Download className="mr-2 h-4 w-4" />
-                  Tải CV
+                  <a href={personalInfo.cv.url} download>
+                    <Download className="mr-2 h-4 w-4" />
+                    Tải CV
+                  </a>
                 </Button>
               </div>
             </div>

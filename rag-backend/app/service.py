@@ -7,9 +7,9 @@ from .schemas import ChatRequest, ChatResponse, Citation
 from .vector_store import RetrievedDocument
 
 NO_ANSWER_TEXT = (
-    "Tôi chưa tìm thấy thông tin đủ tin cậy trong CV hoặc portfolio của Chu Tiến Sơn "
+    "Tôi chưa tìm thấy thông tin đủ tin cậy trong CV hoặc portfolio của Phạm Thu Phương "
     "để trả lời câu hỏi này. Bạn có thể hỏi về kinh nghiệm, kỹ năng, dự án, học vấn "
-    "hoặc thông tin liên hệ công khai của Sơn."
+    "hoặc thông tin liên hệ công khai của Phương."
 )
 
 

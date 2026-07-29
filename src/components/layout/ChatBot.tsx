@@ -21,11 +21,11 @@ interface Message {
 }
 
 const quickQuestions = [
-  "Sơn có kinh nghiệm về AI và RAG như thế nào?",
-  "Các dự án nổi bật của Sơn là gì?",
-  "Hãy mô tả dự án AI Receptionist.",
-  "OpenClaw Recruiting Automation giải quyết bài toán gì?",
-  "Tôi có thể liên hệ với Sơn bằng cách nào?",
+  "Phương có kinh nghiệm Content Marketing như thế nào?",
+  "Các dự án nổi bật của Phương là gì?",
+  "Dự án Lam Duyên đạt kết quả gì?",
+  "Phương đã ứng dụng AI/n8n/OpenClaw vào marketing ra sao?",
+  "Tôi có thể liên hệ với Phương bằng cách nào?",
 ];
 
 const normalizeText = (value: string) =>
@@ -44,20 +44,20 @@ const createFallbackResponse = (question: string) => {
   }
 
   if (normalized.includes("cv") || normalized.includes("lien he") || normalized.includes("email")) {
-    return `Bạn có thể liên hệ Sơn qua email ${personalInfo.email}. CV hiện được đặt tại ${personalInfo.cv.url}.`;
+    return `Bạn có thể liên hệ Phương qua email ${personalInfo.email} hoặc số điện thoại ${personalInfo.phone}. CV hiện được đặt tại ${personalInfo.cv.url}.`;
   }
 
-  if (normalized.includes("skill") || normalized.includes("ky nang") || normalized.includes("cong nghe")) {
+  if (normalized.includes("skill") || normalized.includes("ky nang") || normalized.includes("cong cu")) {
     return `Các nhóm năng lực chính gồm: ${skillGroups
       .map((group) => group.title)
       .join(", ")}.`;
   }
 
-  if (normalized.includes("rag") || normalized.includes("ai") || normalized.includes("chatbot")) {
-    return "Sơn tập trung vào RAG Chatbot, Slot-Value, Function Calling, LLM Agent và workflow automation. Các dự án thường kết nối AI với dữ liệu, API, webhook và cơ chế kiểm soát như re-ranking, schema validation, decision policy và human fallback.";
+  if (normalized.includes("ai") || normalized.includes("n8n") || normalized.includes("openclaw") || normalized.includes("marketing")) {
+    return "Phương tập trung vào Content Marketing, branding, social media growth, nghiên cứu insight và ứng dụng AI tools, n8n, OpenClaw để tăng tốc sản xuất nội dung, đăng bài tuyển dụng/tuyển sinh và hỗ trợ sàng lọc CV.";
   }
 
-  return "Backend RAG hiện chưa phản hồi, nên tôi chỉ có thể trả lời nhanh bằng dữ liệu portfolio tĩnh. Bạn có thể hỏi về kinh nghiệm, kỹ năng, dự án, CV hoặc thông tin liên hệ công khai của Sơn.";
+  return "Backend RAG hiện chưa phản hồi, nên tôi chỉ có thể trả lời nhanh bằng dữ liệu portfolio tĩnh. Bạn có thể hỏi về kinh nghiệm, kỹ năng, dự án, CV hoặc thông tin liên hệ công khai của Phương.";
 };
 
 const ChatBot = () => {
@@ -68,7 +68,7 @@ const ChatBot = () => {
     {
       id: "welcome",
       content:
-        "Xin chào! Tôi là Sơn AI Assistant. Khi RAG backend được bật, tôi sẽ trả lời dựa trên CV và portfolio đã duyệt, kèm nguồn tham chiếu.",
+        "Xin chào! Tôi là Phương Portfolio Assistant. Khi RAG backend được bật, tôi sẽ trả lời dựa trên CV và portfolio đã duyệt, kèm nguồn tham chiếu.",
       isUser: false,
     },
   ]);
@@ -93,10 +93,10 @@ const ChatBot = () => {
 
   const toApiHistory = (items: Message[]): ChatHistoryMessage[] =>
     items
-      .filter((item) => item.id !== "welcome")
-      .map((item) => ({
-        role: item.isUser ? "user" : "assistant",
-        content: item.content,
+      .filter((message) => message.id !== "welcome")
+      .map((message) => ({
+        role: message.isUser ? "user" : "assistant",
+        content: message.content,
       }));
 
   const sendMessage = async (rawContent: string) => {
@@ -152,7 +152,7 @@ const ChatBot = () => {
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
-          aria-label="Mở Sơn AI Assistant"
+          aria-label="Mở Phương Portfolio Assistant"
           className="fixed bottom-5 right-5 z-50 h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-green transition hover:-translate-y-1 hover:bg-primary-dark md:bottom-6 md:right-6"
         >
           <MessageCircle className="h-6 w-6" />
@@ -162,7 +162,7 @@ const ChatBot = () => {
       {isOpen && (
         <Card
           role="dialog"
-          aria-label="Sơn AI Assistant"
+          aria-label="Phương Portfolio Assistant"
           className="chatbot-window fixed bottom-4 right-3 z-50 flex flex-col overflow-hidden rounded-3xl border bg-card/95 shadow-xl backdrop-blur-xl md:bottom-6 md:right-6"
         >
           <div className="flex items-center justify-between border-b border-border bg-primary p-4 text-primary-foreground">
@@ -171,9 +171,9 @@ const ChatBot = () => {
                 <Sparkles className="h-4 w-4" />
               </span>
               <div>
-                <h2 className="font-semibold">Sơn AI Assistant</h2>
+                <h2 className="font-semibold">Phương Assistant</h2>
                 <p className="text-xs text-primary-foreground/80">
-                  Grounded portfolio RAG
+                  Content portfolio RAG
                 </p>
               </div>
             </div>
@@ -227,9 +227,7 @@ const ChatBot = () => {
                             key={citation.document_id}
                             className="rounded-xl border border-border bg-background/70 p-2"
                           >
-                            <p className="text-xs font-semibold">
-                              {citation.title}
-                            </p>
+                            <p className="text-xs font-semibold">{citation.title}</p>
                             <p className="mt-1 text-[11px] text-muted-foreground">
                               {citation.source}
                               {citation.section ? ` / ${citation.section}` : ""}

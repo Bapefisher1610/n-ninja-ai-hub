@@ -48,6 +48,17 @@ class PortfolioVectorStore:
         )
         return len(records)
 
+    def reset(self) -> None:
+        settings = get_settings()
+        try:
+            self.client.delete_collection(settings.collection_name)
+        except Exception:
+            pass
+        self.collection = self.client.get_or_create_collection(
+            name=settings.collection_name,
+            metadata={"hnsw:space": "cosine"},
+        )
+
     def query(self, question: str, top_k: int) -> list[RetrievedDocument]:
         query_embedding = self.embedding_service.embed_query(question)
         result = self.collection.query(

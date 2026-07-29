@@ -1,14 +1,16 @@
 import {
-  Blocks,
+  BarChart3,
   Bot,
   BrainCircuit,
-  Code2,
-  DatabaseZap,
+  Clapperboard,
   FileCheck2,
-  GitBranch,
-  Layers3,
-  LineChart,
-  ShieldCheck,
+  Megaphone,
+  Palette,
+  PenTool,
+  Search,
+  Sparkles,
+  Target,
+  Users,
   Workflow,
 } from "lucide-react";
 import {
@@ -22,20 +24,20 @@ import {
 } from "@/types/portfolio";
 
 export const personalInfo: PersonalInfo = {
-  name: "Chu Tiến Sơn",
-  shortName: "Sơn",
-  role: "Applied AI Engineer",
-  location: "Hà Nội, Việt Nam",
-  email: "sonchu1610203@gmail.com",
-  phone: "0363410150",
+  name: "Phạm Thu Phương",
+  shortName: "Phương",
+  role: "Content Marketing",
+  location: "Sơn Tây, Hà Nội",
+  email: "phamphuong220803@gmail.com",
+  phone: "0981852632",
   headline:
-    "Tôi xây dựng các hệ thống AI kết nối dữ liệu nội bộ, hội thoại đa kênh và quy trình vận hành thực tế.",
+    "Tôi xây dựng nội dung thương hiệu, phát triển kênh truyền thông và triển khai chiến dịch marketing dựa trên insight khách hàng.",
   summary:
-    "Tập trung vào RAG Chatbot, Slot Value, Function Calling, LLM Agent và workflow automation. Các dự án của tôi kết hợp Python, FastAPI, ChromaDB, webhook, API nền tảng và cơ chế kiểm soát như schema validation, re-ranking, decision policy và human fallback.",
+    "Tập trung vào Content Marketing, Branding, Social Media, TikTok growth, nghiên cứu thị trường và ứng dụng AI/n8n/OpenClaw để tự động hóa một phần quy trình tuyển sinh, sản xuất nội dung và quản lý dữ liệu ứng viên.",
   openToWork: true,
   cv: {
     label: "Tải CV",
-    url: "/cv/chu-tien-son-ai-engineer.pdf",
+    url: "/cv/pham-thu-phuong-content-marketing.pdf",
     enabled: true,
   },
 };
@@ -48,12 +50,12 @@ export const socialLinks = {
   },
   github: {
     label: "GitHub",
-    url: "https://github.com/Bapefisher1610",
-    enabled: true,
+    url: "",
+    enabled: false,
   },
   linkedin: {
     label: "LinkedIn",
-    url: "[LINKEDIN_URL]",
+    url: "",
     enabled: false,
   },
 };
@@ -68,292 +70,287 @@ export const navigation: NavigationItem[] = [
 ];
 
 export const evidenceItems = [
-  { label: "Core", value: "RAG Chatbot + Slot Value + Function Calling" },
-  { label: "Automation", value: "LLM Agents" },
-  { label: "Systems", value: "API + Workflow" },
+  { label: "Core", value: "Content Marketing + Branding + Insight" },
+  { label: "Growth", value: "TikTok 1.600+ followers sau hơn 1 tháng" },
+  { label: "Automation", value: "AI tools + n8n + OpenClaw" },
 ];
 
 export const strengths: Strength[] = [
   {
-    id: "real-workflows",
-    icon: Workflow,
-    title: "AI systems connected to real workflows",
+    id: "brand-story",
+    icon: PenTool,
+    title: "Brand story and content direction",
     description:
-      "Kết nối AI với webhook, REST API, cơ sở dữ liệu, chatbot và quy trình nghiệp vụ thay vì chỉ dừng ở demo model.",
+      "Xây dựng câu chuyện thương hiệu, định vị sản phẩm và hệ thống nội dung có tính nhất quán cho social media.",
   },
   {
-    id: "controlled-rag",
-    icon: ShieldCheck,
-    title: "Reliable RAG and controlled responses",
+    id: "market-insight",
+    icon: Search,
+    title: "Market research and customer insight",
     description:
-      "Thiết kế truy xuất bằng ChromaDB, chunk ID, cosine similarity, re-ranking, slot-value và decision policy để giảm hallucination.",
+      "Nghiên cứu thị trường, phân tích xu hướng, khảo sát người tiêu dùng và chuyển insight thành thông điệp truyền thông.",
   },
   {
-    id: "hybrid-automation",
-    icon: FileCheck2,
-    title: "Hybrid AI automation",
+    id: "ai-marketing",
+    icon: Bot,
+    title: "AI-assisted marketing workflow",
     description:
-      "Kết hợp parser, regex, JSON Schema validation và LLM Agent để tự động hóa nhưng vẫn kiểm soát được kết quả.",
+      "Sử dụng ChatGPT, Gemini, NotebookLM, n8n và OpenClaw để tăng tốc viết nội dung, tạo hình ảnh, đăng bài và hỗ trợ sàng lọc CV.",
   },
 ];
 
 export const timeline: TimelineItem[] = [
   {
-    id: "humg",
+    id: "fpt-university",
     period: "2021 - 2026",
-    organization: "Hanoi University of Mining and Geology",
-    role: "Information Technology - GPA 3.17/4.0",
+    organization: "FPT University",
+    role: "Digital Marketing - GPA 8.1/10",
     description:
-      "Xây dựng nền tảng về lập trình, cơ sở dữ liệu, thuật toán, AI và phát triển ứng dụng.",
+      "Nền tảng học tập về Digital Marketing, nghiên cứu thị trường, truyền thông thương hiệu, hành vi khách hàng và triển khai chiến dịch marketing tích hợp.",
     type: "education",
-    skills: ["Information Technology", "SQL", "Python", "Web development"],
+    skills: ["Digital Marketing", "Branding", "Market Research", "IMC"],
   },
   {
-    id: "certificates",
-    period: "2023 - 2024",
-    organization: "Certificates",
-    role: "Google Data Analytics, MOS Word 2019, MOS Excel 2019",
+    id: "next-marketer",
+    period: "06/2024",
+    organization: "The Next Marketer 2024",
+    role: "Top 10 toàn cuộc thi",
     description:
-      "Google Data Analytics hỗ trợ trực tiếp cho định hướng dữ liệu/AI; MOS được giữ như chứng chỉ bổ trợ.",
+      "Cuộc thi do Dược phẩm Hoa Linh và Đại học FPT phối hợp tổ chức; thực hiện nghiên cứu thị trường, khảo sát hơn 100 người tiêu dùng và đề xuất thông điệp truyền thông cho sản phẩm Nước tăng lực Hồng Mã.",
     type: "certificate",
-    skills: ["Data analytics", "Excel", "Word"],
+    skills: ["Consumer Survey", "Insight", "Brand Message", "Market Analysis"],
   },
   {
-    id: "iot-challenge",
-    period: "04/2025 - 06/2025",
-    organization: "IoT Challenge 2025",
-    role: "Computer Vision contributor",
+    id: "adsplus",
+    period: "08/2024 - 12/2024",
+    organization: "Công ty Cổ phần AdsPlus",
+    role: "Nhân viên Kinh doanh",
     description:
-      "Ứng dụng YOLOv3 và OpenCV để phát hiện phương tiện, thu thập luồng giao thông và hỗ trợ lựa chọn vị trí bán lẻ tiềm năng.",
-    type: "project",
-    skills: ["YOLOv3", "OpenCV", "Computer Vision", "Edge optimization"],
-  },
-  {
-    id: "rocket-global",
-    period: "07/2025 - 12/2025",
-    organization: "Rocket Global",
-    role: "AI Engineer Intern",
-    description:
-      "Phát triển và kiểm thử REST API theo yêu cầu nghiệp vụ, hỗ trợ debug, cải thiện chất lượng code và tối ưu ứng dụng GenAI Agent.",
+      "Hỗ trợ triển khai hơn 5 chiến dịch quảng cáo cho khách hàng SME, phối hợp xây dựng nội dung bám sát mục tiêu truyền thông và theo dõi dữ liệu chiến dịch để đề xuất điều chỉnh.",
     type: "work",
-    skills: ["REST API", "Debugging", "GenAI Agent", "Teamwork"],
+    skills: ["SME Ads", "Content Coordination", "Campaign Data", "Consulting"],
   },
   {
-    id: "ai-receptionist",
-    period: "12/2025 - 03/2026",
-    organization: "Graduation Project",
-    role: "AI Engineer & System Integrator",
+    id: "lam-duyen",
+    period: "01/2025 - 12/2025",
+    organization: "Dự án khởi nghiệp Lam Duyên",
+    role: "Branding and Content Marketing",
     description:
-      "Xây dựng AI Receptionist đa phương thức kết hợp nhận diện khuôn mặt, chatbot RAG nội bộ, TTS, session, queue và quản lý khách ra vào.",
+      "Dự án áo dài Lam Duyên lọt Top 30 dự án khởi nghiệp sáng tạo tại Đại học FPT và được đầu tư 50 triệu đồng; xây dựng branding, định hướng truyền thông và hệ thống nội dung nền tảng.",
     type: "project",
-    skills: ["YOLOv8", "ArcFace", "FastAPI", "RAG", "TTS"],
+    skills: ["Brand Strategy", "Social Content", "Gen Z Insight", "Revenue Growth"],
   },
   {
     id: "global-ai",
-    period: "03/2026 - 08/2026",
-    organization: "Global AI",
-    role: "AI Agent Fresher",
+    period: "02/2026 - Nay",
+    organization: "Công ty Cổ phần Global AI",
+    role: "Marketing",
     description:
-      "Thực hành AI technologies trong recruitment workflow, Odoo HRM business workflow, debugging, teamwork và progress reporting.",
+      "Xây dựng thương hiệu cá nhân, phát triển kênh TikTok về công nghệ, AI và chuyển đổi số, triển khai marketing tuyển sinh tự động và hỗ trợ vận hành HRM trên nền tảng Odoo.",
     type: "work",
-    skills: ["OpenClaw", "Odoo HRM", "LLM tools", "Workflow"],
-  },
-  {
-    id: "recruitment-pipeline",
-    period: "03/2026 - 05/2026",
-    organization: "Global AI / OpenClaw",
-    role: "AI CTV / Automation Engineer",
-    description:
-      "Xây dựng 10-stage CV screening pipeline, parser đa định dạng, rubric theo JD, schema-validated JSON scoring và global reranking.",
-    type: "project",
-    skills: ["LLM Agents", "JSON Schema", "Google Sheets", "Supabase"],
-  },
-  {
-    id: "agri-chatbot",
-    period: "06/2026 - Hiện tại",
-    organization: "Remote Project",
-    role: "AI Engineer",
-    description:
-      "Phát triển Agricultural support chatbot tích hợp Facebook Messenger, Slot-Value, ChromaDB, RAG, re-ranking và human fallback.",
-    type: "work",
-    skills: ["Facebook Messenger API", "ChromaDB", "Slot-Value", "RAG"],
+    skills: ["TikTok Growth", "AI Content", "n8n", "OpenClaw", "Odoo HRM"],
   },
 ];
 
 export const experiences: Experience[] = [
   {
-    id: "rocket-global",
-    company: "Rocket Global",
-    role: "AI Engineer Intern",
-    period: "07/2025 - 12/2025",
-    problem:
-      "Công ty cần một kênh chatbot trên Zalo để nhân sự và ứng viên có thể hỏi nhanh các thông tin nội bộ như quy trình ứng tuyển, lộ trình học tập, mentor, học phí, học bổng và chương trình đào tạo.",
-    solution:
-      "Xây dựng workflow chatbot bằng n8n: tin nhắn Zalo đi vào webhook, truy vấn tri thức lưu trong MySQL, gọi AI Agent sinh câu trả lời theo prompt kiểm soát phạm vi, sau đó gửi phản hồi lại qua Zalo API.",
-    impact:
-      "Tạo nền tảng chatbot tri thức nội bộ có thể triển khai thực tế với Docker Compose cho n8n + MySQL, cấu hình credentials, webhook integration và khuyến nghị vận hành production.",
-    technologies: ["n8n", "Zalo API", "MySQL", "Webhook", "AI Agent", "Docker Compose"],
-  },
-  {
-    id: "global-ai-agent",
+    id: "global-ai-brand-channel",
     company: "Global AI",
-    role: "AI Agent Fresher",
-    period: "03/2026 - 08/2026",
+    role: "Marketing",
+    period: "02/2026 - Nay",
     problem:
-      "Quy trình tuyển dụng cần một chatbot/AI Agent hỗ trợ tự động đọc yêu cầu, xử lý CV, phản hồi thông tin ứng viên và giảm thao tác thủ công cho đội tuyển dụng.",
+      "Công ty cần phát triển thương hiệu cá nhân và kênh truyền thông gần gũi để chia sẻ kiến thức về công nghệ, AI và chuyển đổi số.",
     solution:
-      "Tìm hiểu nghiệp vụ tuyển dụng thực tế tại công ty, sau đó thiết kế flow OpenClaw kết nối nhiều nền tảng như Google Sheets, Gmail, Google Docs, Google Drive và các skill riêng cho từng bước: tiếp nhận yêu cầu, đọc CV, tạo đánh giá, lưu kết quả và hỗ trợ phản hồi ứng viên.",
+      "Xây dựng và phát triển kênh TikTok chia sẻ kiến thức, đồng thời xây dựng nội dung cho kênh TikTok văn phòng “Gờ Aaa” theo hướng hài hước, gần gũi với môi trường công sở.",
     impact:
-      "Tạo nền tảng cho hệ thống recruitment automation có thể tích hợp vào quy trình thực tế: chatbot tiếp nhận yêu cầu, hỗ trợ đánh giá CV theo vị trí, chuyển kết quả cho người phụ trách và liên kết với hiểu biết HRM/Odoo.",
-    technologies: ["OpenClaw", "Recruitment Chatbot", "LLM Agents", "LLM Routing", "Odoo HRM", "Codex"],
+      "Kênh TikTok đạt hơn 1.600 followers sau hơn một tháng; nội dung được theo dõi qua lượt tiếp cận, tương tác và tốc độ tăng trưởng kênh.",
+    technologies: ["TikTok", "Content Strategy", "Caption", "Short Video", "Trend Research"],
   },
   {
-    id: "remote-agriculture",
-    company: "Remote Project",
-    role: "AI Engineer",
-    period: "06/2026 - Hiện tại",
+    id: "global-ai-recruitment-marketing",
+    company: "Marketing dự án tuyển sinh tự động",
+    role: "Marketing",
+    period: "02/2026 - Nay",
     problem:
-      "Người dùng đặt câu hỏi nông nghiệp theo nhiều cách khác nhau; chatbot cần hiểu ngữ cảnh và chỉ trả lời khi có đủ bằng chứng dữ liệu.",
+      "Hoạt động tuyển sinh cho các vị trí Fullstack Developer, AI Engineer và các vị trí công nghệ cần tăng tốc sản xuất nội dung, đăng bài và quản lý lượng lớn CV.",
     solution:
-      "Tích hợp Facebook Messenger API, duy trì Slot states, chuẩn hóa alias, tạo ChromaDB filters, truy xuất bằng chunk ID/cosine similarity và re-ranking.",
+      "Sử dụng n8n để tự động hóa quy trình viết nội dung, tạo hình ảnh và đăng bài tuyển sinh trên các hội nhóm Facebook; ứng dụng OpenClaw để tự động đọc, xử lý và hỗ trợ sàng lọc CV theo tiêu chí từng vị trí.",
     impact:
-      "Tạo luồng chatbot có decision policy giữa LLM answer và human fallback, phù hợp hơn cho nghiệp vụ cần kiểm soát độ tin cậy.",
-    technologies: ["Facebook Messenger API", "Slot-Value", "ChromaDB", "RAG", "LLM"],
+      "Hỗ trợ tiếp nhận và quản lý lên đến 1.000 CV, giảm thời gian xử lý thủ công, hạn chế bỏ sót hồ sơ và theo dõi nguồn ứng viên, tỷ lệ phản hồi, trạng thái hồ sơ theo từng kênh.",
+    technologies: ["n8n", "OpenClaw", "Facebook Groups", "AI Content", "CV Screening"],
+  },
+  {
+    id: "global-ai-hrm-odoo",
+    company: "Dự án hỗ trợ vận hành HRM - Tập đoàn Thịnh Cường",
+    role: "Marketing and Customer Insight Support",
+    period: "02/2026 - Nay",
+    problem:
+      "Khách hàng cần được hỗ trợ sử dụng phần mềm HRM trên Odoo, đồng thời sản phẩm cần hiểu rõ phản hồi và khó khăn người dùng trong vận hành.",
+    solution:
+      "Tiếp nhận phản hồi, hướng dẫn xử lý vấn đề trong quá trình vận hành, nghiên cứu hành vi, nhu cầu và khó khăn người dùng để đề xuất cải thiện tài liệu hướng dẫn, nội dung truyền thông và trải nghiệm sản phẩm.",
+    impact:
+      "Nắm rõ nghiệp vụ Odoo HRM như nhân sự, hợp đồng, chấm công, nghỉ phép, tăng ca và tiền lương; đóng góp dữ liệu insight để cải thiện trải nghiệm khách hàng.",
+    technologies: ["Odoo HRM", "User Research", "Customer Feedback", "Documentation", "Product Experience"],
+  },
+  {
+    id: "adsplus-sme-campaigns",
+    company: "AdsPlus",
+    role: "Nhân viên Kinh doanh",
+    period: "08/2024 - 12/2024",
+    problem:
+      "Khách hàng SME cần triển khai chiến dịch quảng cáo có nội dung bám sát mục tiêu truyền thông và đúng nhóm khách hàng.",
+    solution:
+      "Tham gia hỗ trợ hơn 5 chiến dịch quảng cáo, phối hợp xây dựng nội dung, theo dõi dữ liệu chiến dịch, đánh giá hiệu quả tiếp cận và đề xuất điều chỉnh.",
+    impact:
+      "Rèn luyện khả năng tư vấn khách hàng, phân tích nhu cầu, phối hợp triển khai chiến dịch và tối ưu nội dung dựa trên dữ liệu.",
+    technologies: ["SME Marketing", "Ads Campaign", "Customer Consulting", "Performance Tracking"],
   },
 ];
 
 export const projects: Project[] = [
   {
-    id: "agricultural-assistant",
+    id: "lam-duyen-branding",
     number: "01",
-    title: "Agricultural Knowledge Assistant",
+    title: "Dự án thương hiệu áo dài Lam Duyên",
     description:
-      "Chatbot hỗ trợ kiến thức nông nghiệp tích hợp Facebook Messenger, Slot-Value và RAG trên ChromaDB.",
+      "Xây dựng thương hiệu áo dài Lam Duyên từ giai đoạn nền tảng, kết hợp brand story, nghiên cứu thị trường, insight Gen Z và hệ thống nội dung social media.",
     problem:
-      "Câu hỏi nông nghiệp có nhiều cách diễn đạt; hệ thống cần hiểu cây trồng, bệnh, triệu chứng hoặc mục đích sử dụng và không trả lời khi thiếu bằng chứng.",
-    role: "AI Engineer",
+      "Lam Duyên cần hình ảnh thương hiệu rõ ràng, nhất quán về giá trị văn hóa và thẩm mỹ, đồng thời phải chứng minh tiềm năng kinh doanh để phát triển dài hạn trong nhóm khách hàng trẻ.",
+    role: "Branding and Content Marketing",
     solution:
-      "Tích hợp Messenger webhook, trích xuất slot/entity, chuẩn hóa alias, duy trì slot state, tạo ChromaDB filter, truy xuất bằng chunk ID/cosine similarity, re-ranking và decision policy.",
+      "Phân tích xu hướng thị trường, hành vi người tiêu dùng Gen Z và insight về áo dài hiện đại; xây dựng brand story, định vị thương hiệu, chiến lược truyền thông, hệ thống nội dung nền tảng và triển khai social content trên Facebook, TikTok.",
     result:
-      "Có cơ chế chuyển sang human agent khi dữ liệu không đủ tin cậy, giúp kiểm soát hallucination tốt hơn chatbot gọi LLM trực tiếp.",
-    technologies: ["Facebook Messenger API", "Slot-Value", "ChromaDB", "RAG", "Re-ranking", "Human fallback"],
+      "Đạt hơn 3.500 lượt tiếp cận/tháng, engagement trung bình 6-8% trên Facebook và TikTok, doanh thu hơn 30 triệu đồng sau 4 tháng; dự án lọt Top 30 khởi nghiệp sáng tạo tại FPT University và được đầu tư 50 triệu đồng.",
+    technologies: ["Brand Story", "Brand Positioning", "Facebook", "TikTok", "Gen Z Insight", "Startup Branding"],
     detailUrl: "/gioi-thieu/du-an",
   },
   {
-    id: "ai-receptionist",
+    id: "global-ai-company-marketing",
     number: "02",
-    title: "Multimodal AI Receptionist",
+    title: "Marketing Công ty Cổ phần Global AI",
     description:
-      "Hệ thống lễ tân AI thời gian thực kết hợp nhận diện khuôn mặt, chatbot nội bộ, giọng nói và quản lý khách ra vào.",
+      "Xây dựng nội dung truyền thông cho Global AI, tập trung vào thương hiệu cá nhân, kênh TikTok công nghệ, AI, chuyển đổi số và nội dung văn phòng gần gũi.",
     problem:
-      "Front desk cần nhận diện nhiều người, tránh chào lặp, tránh âm thanh chồng và vẫn trả lời theo tri thức nội bộ.",
-    role: "AI Engineer & System Integrator",
+      "Công ty cần phát triển kênh truyền thông có tính nhận diện, dễ tiếp cận với người trẻ và truyền tải được kiến thức về công nghệ, AI, chuyển đổi số theo cách gần gũi hơn.",
+    role: "Marketing",
     solution:
-      "Xây pipeline YOLOv8, MediaPipe FaceMesh, ArcFace ONNX, cosine similarity; domain-restricted RAG chatbot; FastAPI backend; session, queue và 5-minute cooldown.",
+      "Lên ý tưởng, viết caption, viết kịch bản video ngắn, tối ưu nội dung theo trend TikTok; đồng thời xây dựng nội dung cho kênh TikTok văn phòng “Gờ Aaa” theo phong cách hài hước, gần gũi với môi trường công sở.",
     result:
-      "Hỗ trợ phản hồi âm thanh dưới 3 giây mỗi lượt, browser-based enrollment, face registration và access logging với SQLite/MySQL.",
-    technologies: ["YOLOv8", "MediaPipe", "ArcFace ONNX", "FastAPI", "RAG", "TTS"],
+      "Kênh TikTok chia sẻ kiến thức công nghệ, AI và chuyển đổi số đạt hơn 1.600 followers sau hơn 1 tháng; hiệu quả nội dung được theo dõi qua reach, engagement và tốc độ tăng trưởng kênh.",
+    technologies: ["TikTok Growth", "Short Video Script", "Caption", "Trend Research", "AI Content", "Office Content"],
     detailUrl: "/gioi-thieu/du-an",
   },
   {
-    id: "recruitment-pipeline",
+    id: "automated-recruitment-marketing",
     number: "03",
-    title: "AI Recruitment & CV Assessment Pipeline",
+    title: "Marketing dự án tuyển sinh tự động",
     description:
-      "Pipeline kết hợp xử lý xác định và LLM Agent để đọc CV, tạo rubric theo JD, chấm điểm, xếp hạng và lưu kết quả tuyển dụng.",
+      "Ứng dụng AI tools, n8n và OpenClaw vào quy trình marketing tuyển sinh cho các vị trí công nghệ.",
     problem:
-      "Quy trình screening CV cần xử lý nhiều định dạng, giảm phụ thuộc vào suy luận tự do của LLM và có phân luồng review rõ ràng.",
-    role: "AI CTV / Automation Engineer",
+      "Tuyển sinh các vị trí Fullstack Developer, AI Engineer và vị trí công nghệ cần nội dung đều đặn, đăng bài đa kênh và quản lý số lượng CV lớn.",
+    role: "Marketing",
     solution:
-      "Dùng Poppler/pypdf/python-docx/docx2txt/antiword, regex extraction, dynamic JD-based rubric, JSON Schema validation, PASS/REJECT/manual-review routing và global reranking.",
+      "Tự động hóa viết nội dung, tạo hình ảnh và đăng bài lên hội nhóm Facebook bằng n8n; dùng OpenClaw hỗ trợ đọc, xử lý và sàng lọc CV theo tiêu chí vị trí.",
     result:
-      "10-stage screening pipeline, hỗ trợ tối đa 50 CVs/worker, Google Sheets reporting, Google Drive archiving và schema-validated JSON scoring.",
-    technologies: ["Python", "LLM Agents", "JSON Schema", "Regex", "Google Sheets API", "Supabase"],
+      "Hỗ trợ quản lý lên đến 1.000 CV, theo dõi nguồn ứng viên, tỷ lệ phản hồi, trạng thái hồ sơ và hiệu quả từng kênh tuyển sinh.",
+    technologies: ["n8n", "OpenClaw", "AI Tools", "Facebook Groups", "Recruitment Marketing"],
     detailUrl: "/gioi-thieu/du-an",
   },
   {
-    id: "zalo-knowledge-chatbot",
+    id: "thinh-cuong-hrm-operations",
     number: "04",
-    title: "Zalo Internal Knowledge Chatbot",
+    title: "Dự án hỗ trợ vận hành HRM - Tập đoàn Thịnh Cường",
     description:
-      "Chatbot kiến thức nội bộ trên Zalo sử dụng n8n, MySQL, webhook và AI Agent.",
+      "Hỗ trợ khách hàng vận hành phần mềm HRM trên Odoo, kết hợp tiếp nhận phản hồi người dùng, phân tích nhu cầu và cải thiện tài liệu, nội dung hướng dẫn.",
     problem:
-      "Doanh nghiệp cần trả lời kiến thức nội bộ qua Zalo nhưng vẫn kiểm soát domain response và triển khai được trên môi trường thực tế.",
-    role: "AI Engineer Intern",
+      "Khách hàng cần sử dụng hệ thống HRM ổn định trong các nghiệp vụ nhân sự như hồ sơ nhân viên, hợp đồng, chấm công, nghỉ phép, tăng ca và lương; đồng thời đội sản phẩm cần hiểu rõ pain point thực tế của người dùng.",
+    role: "Marketing and Customer Insight Support",
     solution:
-      "Thiết kế message flow: inbound Zalo messages trigger webhooks, query MySQL-backed knowledge, gọi AI Agent và trả kết quả qua Zalo API.",
+      "Tiếp nhận phản hồi, hướng dẫn xử lý vấn đề trong quá trình sử dụng Odoo HRM, nghiên cứu hành vi và nhu cầu người dùng, tổng hợp insight để cải thiện tài liệu hướng dẫn, nội dung truyền thông và trải nghiệm sản phẩm.",
     result:
-      "Chuẩn bị Docker Compose cho n8n + MySQL, credential setup, webhook integration, HTTPS reverse proxy recommendation, retry handling và outbound normalization.",
-    technologies: ["n8n", "Zalo API", "MySQL", "Docker Compose", "Webhook", "AI Agent"],
+      "Góp phần làm rõ vấn đề người dùng gặp trong vận hành HRM, hỗ trợ cải thiện trải nghiệm khách hàng và giúp nội dung hướng dẫn sát hơn với nghiệp vụ thực tế.",
+    technologies: ["Odoo HRM", "Customer Feedback", "User Research", "Documentation", "Product Experience"],
     detailUrl: "/gioi-thieu/du-an",
   },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
-    id: "ai-engineering",
-    title: "AI Engineering",
+    id: "content-branding",
+    title: "Content and Branding",
     skills: [
-      "LLM integration",
-      "RAG",
-      "LLM Agents",
-      "Prompt engineering",
-      "Slot-Value extraction",
-      "Embedding & cosine similarity",
-      "Re-ranking",
-      "Structured output",
-      "JSON Schema validation",
-      "Human fallback",
+      "Content Marketing",
+      "Brand Story",
+      "Brand Positioning",
+      "IMC Planning",
+      "Caption Writing",
+      "Short Video Script",
+      "Social Content System",
     ],
   },
   {
-    id: "backend-data",
-    title: "AI Backend & Data",
+    id: "market-research",
+    title: "Market Research and Insight",
     skills: [
-      "Python",
-      "FastAPI",
-      "REST API",
-      "Webhook",
-      "MySQL",
-      "PostgreSQL",
-      "Supabase",
-      "ChromaDB",
-      "Docker Compose",
+      "Market Research",
+      "Trend Analysis",
+      "Customer Insight",
+      "Consumer Survey",
+      "Target Audience",
+      "Brand Audit",
+      "Campaign Evaluation",
     ],
   },
   {
-    id: "automation-integration",
-    title: "Automation & Integration",
+    id: "social-growth",
+    title: "Social Media Growth",
     skills: [
+      "TikTok Channel Growth",
+      "Facebook Content",
+      "Engagement Tracking",
+      "Reach Analysis",
+      "Community Posting",
+      "Trend Optimization",
+    ],
+  },
+  {
+    id: "ai-automation",
+    title: "AI and Automation Tools",
+    skills: [
+      "ChatGPT",
+      "Gemini",
+      "NotebookLM",
+      "Flow",
+      "Grok",
       "n8n",
-      "Facebook Messenger API",
-      "Zalo API",
-      "Google Drive API",
-      "Google Sheets API",
-      "Telegram chatbot",
-      "Workflow automation",
+      "OpenClaw",
+      "AI-assisted Content",
     ],
   },
   {
-    id: "computer-vision",
-    title: "Computer Vision",
-    skills: ["OpenCV", "YOLO", "MediaPipe", "ArcFace", "ONNX", "TensorFlow", "PyTorch"],
-  },
-  {
-    id: "supporting-tools",
-    title: "Supporting Tools",
-    skills: ["Node.js", "JavaScript", "Pandas", "NumPy", "Scikit-learn", "Regex", "Document parsing"],
+    id: "creative-tools",
+    title: "Creative and Operation Tools",
+    skills: [
+      "Canva",
+      "CapCut",
+      "Odoo HRM",
+      "Customer Feedback",
+      "Documentation",
+      "Campaign Coordination",
+    ],
   },
 ];
 
 export const techBadges = [
-  { label: "RAG", icon: BrainCircuit },
-  { label: "LLM Agents", icon: Bot },
-  { label: "ChromaDB", icon: DatabaseZap },
-  { label: "FastAPI", icon: Code2 },
+  { label: "Content", icon: PenTool },
+  { label: "Branding", icon: Palette },
+  { label: "Insight", icon: BrainCircuit },
+  { label: "TikTok", icon: Clapperboard },
+  { label: "AI Tools", icon: Sparkles },
   { label: "n8n", icon: Workflow },
-  { label: "Computer Vision", icon: LineChart },
-  { label: "Odoo/HRM", icon: Blocks },
-  { label: "Webhook", icon: GitBranch },
-  { label: "Schema", icon: Layers3 },
+  { label: "OpenClaw", icon: FileCheck2 },
+  { label: "Social", icon: Megaphone },
+  { label: "Analytics", icon: BarChart3 },
+  { label: "Audience", icon: Users },
+  { label: "Strategy", icon: Target },
 ];

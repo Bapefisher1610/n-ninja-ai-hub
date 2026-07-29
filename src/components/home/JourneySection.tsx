@@ -13,8 +13,8 @@ export const JourneySection = () => {
       <div className="container mx-auto px-4">
         <SectionHeading
           eyebrow="Hành trình"
-          title="Hành trình học tập và phát triển"
-          description="Một timeline trung thực về nền tảng học tập, hướng chuyển dịch sang AI và các mốc đang cần bổ sung dữ liệu xác nhận."
+          title="Học tập, dự án và trải nghiệm marketing"
+          description="Timeline được viết theo CV: từ nền tảng Digital Marketing, các cuộc thi và dự án thương hiệu đến công việc Content Marketing tại Global AI."
         />
 
         <div className="relative mt-12 space-y-6 lg:ml-8">

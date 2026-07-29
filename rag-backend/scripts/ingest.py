@@ -62,7 +62,9 @@ def main() -> None:
     args = parser.parse_args()
 
     records = load_records(args.input)
-    count = PortfolioVectorStore().upsert(records)
+    store = PortfolioVectorStore()
+    store.reset()
+    count = store.upsert(records)
     print(f"Indexed {count} approved public records from {args.input}")
 
 
