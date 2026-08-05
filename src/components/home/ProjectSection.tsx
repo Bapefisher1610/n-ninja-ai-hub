@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SectionHeading } from "./SectionHeading";
+import { Button } from "@/components/ui/button";
 import { projects } from "@/data/portfolio";
 
 export const ProjectSection = () => {
@@ -74,6 +77,15 @@ export const ProjectSection = () => {
                       </span>
                     ))}
                   </div>
+
+                  {project.detailUrl !== "/gioi-thieu/du-an" && (
+                    <Button asChild className="mt-6 btn-scale">
+                      <Link to={project.detailUrl}>
+                        Xem chi tiết bài viết
+                        <ArrowUpRight className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                  )}
                 </div>
               </div>
             </motion.article>

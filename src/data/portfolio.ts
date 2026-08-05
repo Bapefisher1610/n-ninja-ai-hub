@@ -222,7 +222,7 @@ export const projects: Project[] = [
     result:
       "Đạt hơn 3.500 lượt tiếp cận/tháng, engagement trung bình 6-8% trên Facebook và TikTok, doanh thu hơn 30 triệu đồng sau 4 tháng; dự án lọt Top 30 khởi nghiệp sáng tạo tại FPT University và được đầu tư 50 triệu đồng.",
     technologies: ["Brand Story", "Brand Positioning", "Facebook", "TikTok", "Gen Z Insight", "Startup Branding"],
-    detailUrl: "/gioi-thieu/du-an",
+    detailUrl: "/du-an/lam-duyen",
   },
   {
     id: "global-ai-company-marketing",

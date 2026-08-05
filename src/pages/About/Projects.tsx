@@ -1,6 +1,9 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { projects } from "@/data/portfolio";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -68,6 +71,15 @@ const Projects = () => {
                       </Badge>
                     ))}
                   </div>
+
+                  {project.detailUrl !== "/gioi-thieu/du-an" && (
+                    <Button asChild className="mt-6 btn-scale">
+                      <Link to={project.detailUrl}>
+                        Xem chi tiết bài viết
+                        <ArrowUpRight className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                  )}
                 </div>
               </div>
             </Card>

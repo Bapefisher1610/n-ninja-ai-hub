@@ -12,6 +12,7 @@ import AboutProjects from "./pages/About/Projects";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
 import TermsOfService from "./pages/Legal/TermsOfService";
+import LamDuyen from "./pages/Projects/LamDuyen";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/gioi-thieu/ky-nang" element={<AboutSkills />} />
               <Route path="/gioi-thieu/hoc-van" element={<AboutEducation />} />
               <Route path="/gioi-thieu/du-an" element={<AboutProjects />} />
+              <Route path="/du-an/lam-duyen" element={<LamDuyen />} />
               <Route path="/lien-he" element={<Contact />} />
               <Route path="/chinh-sach-bao-mat" element={<PrivacyPolicy />} />
               <Route path="/dieu-khoan-su-dung" element={<TermsOfService />} />
