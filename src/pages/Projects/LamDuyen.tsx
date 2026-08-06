@@ -79,21 +79,21 @@ const strategyBlocks = [
 
 const evidenceLinks = [
   {
-    title: "Bài viết nội dung Lam Duyên",
+    title: "Lam Duyên Content",
     type: "Google Docs",
     description: "Tài liệu Google Docs tổng hợp nội dung trình bày, câu chuyện thương hiệu và định hướng truyền thông.",
     url: "https://docs.google.com/document/d/1N0A_N2gcTKU1tbzYZePxMiWmKVYDK7XQz-Qx8VCScPQ/edit?tab=t.z4sphmso7mo8",
     icon: FileText,
   },
   {
-    title: "Bảng dữ liệu triển khai 1",
+    title: "Lam Duyên Plan",
     type: "Google Sheets",
     description: "Google Sheets lưu dữ liệu phục vụ quá trình theo dõi, phân tích và chứng minh hiệu quả dự án.",
     url: "https://docs.google.com/spreadsheets/d/1QtQO_Nz9UiC4LjpprZTvVaK1UBGX3x95DALWwexw8CA/edit?gid=1087614076#gid=1087614076",
     icon: Table2,
   },
   {
-    title: "Bảng dữ liệu triển khai 2",
+    title: "Lam Duyên Action Plan",
     type: "Google Sheets",
     description: "Google Sheets bổ sung dữ liệu vận hành, nội dung hoặc kết quả liên quan đến dự án Lam Duyên.",
     url: "https://docs.google.com/spreadsheets/d/1F-3oHoWgJw71W016ZfzULHT2Oe1qE8VONFojGTJAqT8/edit?gid=872084949#gid=872084949",
