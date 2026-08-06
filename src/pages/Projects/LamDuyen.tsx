@@ -133,6 +133,45 @@ const LamDuyen = () => {
                 </span>
               ))}
             </div>
+
+            <div className="mt-8 rounded-md border border-[#57bfa6]/25 bg-white/78 p-4 shadow-sm backdrop-blur dark:bg-white/[0.055]">
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#276653] dark:text-[#57bfa6]">
+                  Minh chứng dự án
+                </p>
+                <span className="text-xs font-semibold text-[#5b746d] dark:text-[#c9d7df]">
+                  3 file
+                </span>
+              </div>
+              <div className="grid gap-2 sm:grid-cols-3">
+                {evidenceLinks.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <a
+                      key={item.url}
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex min-h-[64px] items-center gap-3 rounded-md border border-[#57bfa6]/20 bg-white px-3 py-2 text-left transition hover:-translate-y-0.5 hover:border-[#57bfa6]/55 hover:shadow-md dark:bg-[#0d1824]"
+                    >
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-[#57bfa6]/12 text-[#276653] dark:text-[#57bfa6]">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block truncate text-sm font-bold text-[#15352d] dark:text-white">
+                          {item.title}
+                        </span>
+                        <span className="mt-0.5 flex items-center gap-1 text-xs font-semibold text-[#5b746d] dark:text-[#c9d7df]">
+                          Mở file
+                          <ArrowUpRight className="h-3 w-3 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        </span>
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
           <div className="lam-duyen-visual-stage mx-auto grid w-full max-w-[740px] items-center gap-5 rounded-md p-5 sm:grid-cols-[269px_minmax(0,1fr)]">
