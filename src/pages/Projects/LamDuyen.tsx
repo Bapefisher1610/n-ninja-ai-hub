@@ -37,27 +37,43 @@ const gallery = [
 ];
 
 const highlights = [
-  "Top 30 dự án khởi nghiệp sáng tạo tại FPT University",
-  "Được đầu tư 50 triệu đồng để tiếp tục phát triển",
-  "Hơn 30 triệu đồng doanh thu sau 4 tháng triển khai",
-  "Engagement trung bình 6-8% trên Facebook và TikTok",
+  {
+    value: "Top 30",
+    label: "dự án khởi nghiệp sáng tạo tại FPT University",
+  },
+  {
+    value: "50 triệu",
+    label: "giá trị đầu tư nhận được để tiếp tục phát triển",
+  },
+  {
+    value: "3.500+",
+    label: "lượt tiếp cận mỗi tháng trên các kênh social",
+  },
+  {
+    value: "6-8%",
+    label: "engagement trung bình trên Facebook và TikTok",
+  },
+  {
+    value: "30 triệu+",
+    label: "doanh thu sau 4 tháng triển khai",
+  },
 ];
 
 const strategyBlocks = [
   {
     icon: Target,
-    title: "Định vị thương hiệu",
-    text: "Lam Duyên được xây theo tinh thần áo dài hiện đại: giữ chất Việt, nhưng giao tiếp bằng ngôn ngữ thị giác gần với Gen Z.",
+    title: "Cá nhân hóa lựa chọn",
+    text: "Khách hàng có thể hình dung và lựa chọn chiếc áo dài phù hợp với vóc dáng, phong cách cá nhân, mục đích sử dụng và từng sự kiện cụ thể.",
   },
   {
     icon: Sparkles,
-    title: "Brand story",
-    text: "Câu chuyện thương hiệu xoay quanh ký ức, sự duyên dáng và cảm giác tự tin khi người trẻ mặc áo dài trong những khoảnh khắc đời thường.",
+    title: "Trải nghiệm công nghệ",
+    text: "AI thử áo, hình ảnh sản phẩm 360 độ và hệ thống tùy chọn giúp quá trình tư vấn, đặt may trở nên trực quan, thuận tiện và cá nhân hóa hơn.",
   },
   {
     icon: Megaphone,
-    title: "Social content",
-    text: "Nội dung được chia thành các tuyến: bộ sưu tập, hậu trường, workshop, mùa vụ, ưu đãi và recap hoạt động để tạo nhịp xuất hiện đều đặn.",
+    title: "Chiều sâu văn hóa",
+    text: "Mỗi thiết kế được gửi gắm câu chuyện về lịch sử, vẻ đẹp người phụ nữ Việt Nam, phong tục, vùng miền và bản sắc dân tộc.",
   },
 ];
 
@@ -77,16 +93,17 @@ const LamDuyen = () => {
 
             <Badge className="bg-[#57bfa6] text-white hover:bg-[#57bfa6]">Case study Lam Duyên</Badge>
             <h1 className="mt-5 font-manrope text-4xl font-extrabold leading-[1.12] tracking-normal md:text-5xl lg:text-6xl">
-              Áo dài Việt được kể lại bằng ngôn ngữ của Gen Z
+              Lam Duyên: áo dài Việt trong trải nghiệm thời trang số
             </h1>
             <p className="mt-6 text-lg leading-8 text-[#3f6259] dark:text-muted-foreground">
-              Lam Duyên là dự án thương hiệu áo dài được xây từ nền tảng branding, nghiên cứu thị trường,
-              insight khách hàng trẻ và hệ thống nội dung social media. Vai trò chính: định hướng thương hiệu,
-              xây dựng câu chuyện, triển khai nội dung và đo hiệu quả truyền thông.
+              Lam Duyên không chỉ tạo nên những thiết kế áo dài đẹp, mà còn xây dựng một trải nghiệm
+              thời trang mới dựa trên sự giao thoa giữa văn hóa Việt Nam, thiết kế hiện đại và công nghệ.
+              Trong dự án, Phương tham gia xây dựng định hướng thương hiệu, câu chuyện nội dung và các
+              điểm chạm social để biến ý tưởng sản phẩm thành một thương hiệu có sức lan tỏa.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["Branding", "Content Marketing", "Gen Z Insight", "Facebook", "TikTok"].map((item) => (
+              {["Áo dài Việt", "AI thử áo", "Sản phẩm 360 độ", "Cá nhân hóa", "Văn hóa Việt"].map((item) => (
                 <span key={item} className="rounded-full border border-[#57bfa6]/35 bg-white/70 px-4 py-2 text-sm font-semibold text-[#276653] dark:bg-card dark:text-foreground">
                   {item}
                 </span>
@@ -94,37 +111,90 @@ const LamDuyen = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-[0.74fr_1fr] gap-4">
-            <div className="flex min-h-[440px] items-center justify-center overflow-hidden rounded-md bg-white p-3 shadow-xl">
+          <div className="lam-duyen-visual-stage mx-auto grid w-full max-w-[740px] items-center gap-5 rounded-md p-5 sm:grid-cols-[269px_minmax(0,1fr)]">
+            <figure className="lam-duyen-visual-card mx-auto aspect-[269/420] w-[269px] overflow-hidden rounded-md bg-white">
               <img
                 src="/assets/lam-duyen/lam-duyen-03.png"
                 alt="Trang Facebook Lam Duyên"
-                className="h-full max-h-[620px] w-full object-contain"
+                className="block h-auto w-[269px]"
               />
-            </div>
-            <div className="space-y-4 pt-10">
-              <img
-                src="/assets/lam-duyen/lam-duyen-11.png"
-                alt="Poster preorder Vải Áo Ai Thu"
-                className="aspect-square w-full rounded-md object-cover shadow-lg"
-              />
-              <img
-                src="/assets/lam-duyen/lam-duyen-10.png"
-                alt="Ảnh khách hàng mặc áo dài Lam Duyên"
-                className="aspect-[4/3] w-full rounded-md object-cover shadow-lg"
-              />
+            </figure>
+
+            <div className="grid gap-5">
+              <figure className="lam-duyen-visual-card overflow-hidden rounded-md bg-white">
+                <img
+                  src="/assets/lam-duyen/lam-duyen-11.png"
+                  alt="Poster preorder Vải Áo Ai Thu"
+                  className="aspect-square w-full object-cover"
+                />
+              </figure>
+              <figure className="lam-duyen-visual-card overflow-hidden rounded-md bg-white">
+                <img
+                  src="/assets/lam-duyen/lam-duyen-10.png"
+                  alt="Ảnh khách hàng mặc áo dài Lam Duyên"
+                  className="aspect-[16/10] w-full object-cover"
+                />
+              </figure>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-shell bg-background">
+      <section className="section-shell bg-[#07111c] text-white">
         <div className="container mx-auto px-4">
-          <div className="grid gap-4 md:grid-cols-4">
-            {highlights.map((item) => (
-              <div key={item} className="rounded-md border border-border bg-card p-5 shadow-sm">
-                <CheckCircle2 className="h-5 w-5 text-primary" />
-                <p className="mt-4 text-sm font-semibold leading-7 text-foreground">{item}</p>
+          <div className="mb-10 grid gap-8 lg:grid-cols-[0.62fr_0.38fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#57bfa6]">Thành tích nổi bật</p>
+              <h2 className="mt-3 max-w-4xl font-manrope text-3xl font-extrabold tracking-normal text-white md:text-5xl">
+              Dự án có cả câu chuyện thương hiệu, trải nghiệm công nghệ và kết quả kinh doanh rõ ràng.
+              </h2>
+            </div>
+            <p className="text-base leading-8 text-white/68">
+              Những con số này cho thấy Lam Duyên không chỉ dừng ở ý tưởng sản phẩm, mà đã có tín hiệu thị trường,
+              năng lực truyền thông và kết quả triển khai thực tế.
+            </p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-[1.05fr_1.4fr]">
+            <div className="relative overflow-hidden rounded-md border border-[#57bfa6]/35 bg-[#10281f] p-8 shadow-2xl">
+              <div className="absolute right-0 top-0 h-28 w-28 rounded-bl-full bg-[#57bfa6]/18" />
+              <CheckCircle2 className="h-6 w-6 text-[#f3d58f]" />
+              <p className="mt-8 font-manrope text-6xl font-extrabold leading-none text-[#f3d58f] md:text-7xl">
+                Top 30
+              </p>
+              <p className="mt-5 max-w-sm text-lg font-semibold leading-8 text-white">
+                dự án khởi nghiệp sáng tạo tại FPT University
+              </p>
+              <div className="mt-8 h-px bg-white/15" />
+              <p className="mt-5 text-sm leading-7 text-white/68">
+                Cột mốc giúp Lam Duyên chứng minh tiềm năng thương hiệu, tính khả thi của sản phẩm và khả năng kể
+                câu chuyện áo dài theo hướng hiện đại.
+              </p>
+            </div>
+
+            <div className="grid gap-5 sm:grid-cols-2">
+              {highlights.slice(1).map((item) => (
+                <div key={item.value} className="rounded-md border border-white/12 bg-white/[0.045] p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#57bfa6]/45 hover:bg-white/[0.07]">
+                  <CheckCircle2 className="h-5 w-5 text-[#57bfa6]" />
+                  <p className="mt-5 font-manrope text-4xl font-extrabold leading-none text-white">
+                    {item.value}
+                  </p>
+                  <p className="mt-3 text-sm font-medium leading-6 text-white/68">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-5 grid gap-5 md:grid-cols-3">
+            {[
+              "Brand story có chiều sâu văn hóa",
+              "Trải nghiệm số: AI thử áo + sản phẩm 360 độ",
+              "Social content có khả năng chuyển hóa sang tư vấn và bán hàng",
+            ].map((item) => (
+              <div key={item} className="rounded-md border border-[#57bfa6]/20 bg-[#57bfa6]/8 px-5 py-4 text-sm font-semibold leading-6 text-[#baf3df]">
+                {item}
               </div>
             ))}
           </div>
@@ -134,21 +204,20 @@ const LamDuyen = () => {
       <section className="section-shell bg-background-secondary">
         <div className="container mx-auto grid gap-10 px-4 lg:grid-cols-[0.45fr_0.55fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Bài toán</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Tổng quan</p>
             <h2 className="mt-3 font-poppins text-3xl font-bold tracking-tight md:text-4xl">
-              Tạo một thương hiệu áo dài vừa có chất văn hóa, vừa đủ gần với khách hàng trẻ.
+              Không chỉ bán mẫu áo có sẵn, Lam Duyên kiến tạo sản phẩm phù hợp với từng người mặc.
             </h2>
           </div>
           <div className="space-y-5 text-base leading-8 text-muted-foreground">
             <p>
-              Lam Duyên cần nhiều hơn một bộ nhận diện đẹp. Dự án cần chứng minh được tiềm năng kinh doanh,
-              tạo niềm tin với người mặc trẻ và giữ sự nhất quán giữa sản phẩm, hình ảnh, bài đăng, workshop
-              và các điểm chạm bán hàng.
+              Thông qua các ứng dụng như AI thử áo, hình ảnh sản phẩm 360 độ và khả năng tùy chọn kiểu dáng,
+              màu sắc, chất liệu, khách hàng có thể dễ dàng hình dung và lựa chọn chiếc áo dài phù hợp với
+              vóc dáng, phong cách cá nhân, mục đích sử dụng cũng như từng sự kiện cụ thể.
             </p>
             <p>
-              Cách triển khai tập trung vào nghiên cứu xu hướng áo dài hiện đại, insight Gen Z, hành vi tiêu
-              dùng trên social media và cách biến mỗi bộ ảnh thành một mẩu chuyện có thể kéo người xem đi từ
-              nhận biết đến nhắn tin tư vấn.
+              Mỗi thiết kế còn được gửi gắm một câu chuyện về lịch sử, vẻ đẹp của người phụ nữ Việt Nam và
+              bản sắc dân tộc, tạo nên chiều sâu văn hóa và giá trị cảm xúc khác biệt.
             </p>
           </div>
         </div>
@@ -157,9 +226,9 @@ const LamDuyen = () => {
       <section className="section-shell bg-background">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Chiến lược triển khai</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">Điểm khác biệt</p>
             <h2 className="mt-3 font-poppins text-3xl font-bold tracking-tight md:text-4xl">
-              Từ brand story đến lịch nội dung có thể vận hành
+              Truyền thống được tiếp nối bằng tư duy sáng tạo và công nghệ hiện đại
             </h2>
           </div>
 
@@ -183,20 +252,20 @@ const LamDuyen = () => {
       <section className="section-shell bg-[#15352d] text-white dark:bg-slate-950">
         <div className="container mx-auto grid gap-10 px-4 lg:grid-cols-[0.4fr_0.6fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#f3d58f]">Kết quả</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#f3d58f]">Tinh túy dự án</p>
             <h2 className="mt-3 font-poppins text-3xl font-bold tracking-tight md:text-4xl">
-              Kết quả đủ để chứng minh dự án có sức sống ngoài bản kế hoạch.
+              Điểm mạnh của Lam Duyên nằm ở cách nối truyền thống, trải nghiệm số và hiệu quả truyền thông.
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              ["3.500+", "lượt tiếp cận mỗi tháng"],
-              ["6-8%", "engagement trung bình"],
-              ["30 triệu+", "doanh thu sau 4 tháng"],
-              ["50 triệu", "giá trị đầu tư nhận được"],
+              ["Văn hóa", "gìn giữ cấu trúc và tinh thần áo dài truyền thống"],
+              ["Công nghệ", "làm rõ sản phẩm bằng AI thử áo và hình ảnh 360 độ"],
+              ["Cá nhân", "tạo thiết kế phù hợp với dấu ấn riêng của người mặc"],
+              ["Ứng dụng", "đồng hành trong công sở, trường học, lễ hội và đời sống"],
             ].map(([value, label]) => (
               <div key={label} className="rounded-md border border-white/15 bg-white/8 p-6">
-                <p className="font-poppins text-4xl font-black text-[#f3d58f]">{value}</p>
+                <p className="font-manrope text-3xl font-extrabold text-[#f3d58f]">{value}</p>
                 <p className="mt-2 text-sm font-medium text-white/75">{label}</p>
               </div>
             ))}
