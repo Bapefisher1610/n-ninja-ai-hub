@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Image, Megaphone, Sparkles, Target } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, FileText, Image, Megaphone, Sparkles, Table2, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const gallery = [
@@ -77,6 +77,30 @@ const strategyBlocks = [
   },
 ];
 
+const evidenceLinks = [
+  {
+    title: "Bài viết nội dung Lam Duyên",
+    type: "Google Docs",
+    description: "Tài liệu Google Docs tổng hợp nội dung trình bày, câu chuyện thương hiệu và định hướng truyền thông.",
+    url: "https://docs.google.com/document/d/1N0A_N2gcTKU1tbzYZePxMiWmKVYDK7XQz-Qx8VCScPQ/edit?tab=t.z4sphmso7mo8",
+    icon: FileText,
+  },
+  {
+    title: "Bảng dữ liệu triển khai 1",
+    type: "Google Sheets",
+    description: "Google Sheets lưu dữ liệu phục vụ quá trình theo dõi, phân tích và chứng minh hiệu quả dự án.",
+    url: "https://docs.google.com/spreadsheets/d/1QtQO_Nz9UiC4LjpprZTvVaK1UBGX3x95DALWwexw8CA/edit?gid=1087614076#gid=1087614076",
+    icon: Table2,
+  },
+  {
+    title: "Bảng dữ liệu triển khai 2",
+    type: "Google Sheets",
+    description: "Google Sheets bổ sung dữ liệu vận hành, nội dung hoặc kết quả liên quan đến dự án Lam Duyên.",
+    url: "https://docs.google.com/spreadsheets/d/1F-3oHoWgJw71W016ZfzULHT2Oe1qE8VONFojGTJAqT8/edit?gid=872084949#gid=872084949",
+    icon: Table2,
+  },
+];
+
 const LamDuyen = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -149,7 +173,7 @@ const LamDuyen = () => {
               Dự án có cả câu chuyện thương hiệu, trải nghiệm công nghệ và kết quả kinh doanh rõ ràng.
               </h2>
             </div>
-            <p className="text-base leading-8 text-white/68">
+            <p className="text-base leading-8 text-[#c9d7df]">
               Những con số này cho thấy Lam Duyên không chỉ dừng ở ý tưởng sản phẩm, mà đã có tín hiệu thị trường,
               năng lực truyền thông và kết quả triển khai thực tế.
             </p>
@@ -166,7 +190,7 @@ const LamDuyen = () => {
                 dự án khởi nghiệp sáng tạo tại FPT University
               </p>
               <div className="mt-8 h-px bg-white/15" />
-              <p className="mt-5 text-sm leading-7 text-white/68">
+              <p className="mt-5 text-sm leading-7 text-[#c9d7df]">
                 Cột mốc giúp Lam Duyên chứng minh tiềm năng thương hiệu, tính khả thi của sản phẩm và khả năng kể
                 câu chuyện áo dài theo hướng hiện đại.
               </p>
@@ -179,7 +203,7 @@ const LamDuyen = () => {
                   <p className="mt-5 font-manrope text-4xl font-extrabold leading-none text-white">
                     {item.value}
                   </p>
-                  <p className="mt-3 text-sm font-medium leading-6 text-white/68">
+                  <p className="mt-3 text-sm font-medium leading-6 text-[#c9d7df]">
                     {item.label}
                   </p>
                 </div>
@@ -266,9 +290,57 @@ const LamDuyen = () => {
             ].map(([value, label]) => (
               <div key={label} className="rounded-md border border-white/15 bg-white/8 p-6">
                 <p className="font-manrope text-3xl font-extrabold text-[#f3d58f]">{value}</p>
-                <p className="mt-2 text-sm font-medium text-white/75">{label}</p>
+                <p className="mt-2 text-sm font-medium text-[#dce8ee]">{label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-shell bg-background">
+        <div className="container mx-auto px-4">
+          <div className="rounded-md border border-primary/15 bg-[#07111c] p-5 shadow-2xl md:p-8">
+          <div className="mb-10 grid gap-6 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#57bfa6]">Tài liệu minh chứng</p>
+              <h2 className="mt-3 font-manrope text-3xl font-extrabold tracking-normal text-white md:text-4xl">
+                Các file tham khảo giúp người xem kiểm chứng chiều sâu triển khai của dự án.
+              </h2>
+            </div>
+            <p className="text-base leading-8 text-[#c9d7df]">
+              Bộ tài liệu gồm phần nội dung trình bày và các bảng dữ liệu liên quan đến quá trình làm dự án Lam Duyên.
+              Người xem có thể mở trực tiếp để xem thêm bối cảnh, dữ liệu và cách triển khai.
+            </p>
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-3">
+            {evidenceLinks.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                <article key={item.url} className="group relative overflow-hidden rounded-md border border-white/12 bg-white/[0.055] p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#57bfa6]/55 hover:bg-white/[0.085] hover:shadow-[0_22px_55px_hsl(166_74%_48%_/_0.18)]">
+                  <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-[#57bfa6]/10 transition group-hover:bg-[#57bfa6]/18" />
+                  <div className="relative flex items-start justify-between gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#57bfa6]/14 text-[#57bfa6] ring-1 ring-[#57bfa6]/25">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <span className="rounded-full border border-white/12 bg-white/8 px-3 py-1 text-xs font-bold text-[#dce8ee]">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-[#f3d58f]">{item.type}</p>
+                  <h3 className="mt-3 text-xl font-bold text-white">{item.title}</h3>
+                  <p className="mt-3 min-h-[84px] text-sm leading-7 text-[#c9d7df]">{item.description}</p>
+                  <Button asChild className="mt-6 w-full justify-between bg-[#57bfa6] text-[#07111c] hover:bg-[#7be4c8]">
+                    <a href={item.url} target="_blank" rel="noreferrer">
+                      Mở tài liệu
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </Button>
+                </article>
+              );
+            })}
+          </div>
           </div>
         </div>
       </section>
