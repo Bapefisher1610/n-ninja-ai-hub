@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/Legal/PrivacyPolicy";
 import TermsOfService from "./pages/Legal/TermsOfService";
 import LamDuyen from "./pages/Projects/LamDuyen";
+import ThinhCuongHrm from "./pages/Projects/ThinhCuongHrm";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
               <Route path="/gioi-thieu/hoc-van" element={<AboutEducation />} />
               <Route path="/gioi-thieu/du-an" element={<AboutProjects />} />
               <Route path="/du-an/lam-duyen" element={<LamDuyen />} />
+              <Route path="/du-an/thinh-cuong-hrm" element={<ThinhCuongHrm />} />
               <Route path="/lien-he" element={<Contact />} />
               <Route path="/chinh-sach-bao-mat" element={<PrivacyPolicy />} />
               <Route path="/dieu-khoan-su-dung" element={<TermsOfService />} />

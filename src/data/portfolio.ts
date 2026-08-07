@@ -223,6 +223,8 @@ export const projects: Project[] = [
       "Đạt hơn 3.500 lượt tiếp cận/tháng, engagement trung bình 6-8% trên Facebook và TikTok, doanh thu hơn 30 triệu đồng sau 4 tháng; dự án lọt Top 30 khởi nghiệp sáng tạo tại FPT University và được đầu tư 50 triệu đồng.",
     technologies: ["Brand Story", "Brand Positioning", "Facebook", "TikTok", "Gen Z Insight", "Startup Branding"],
     detailUrl: "/du-an/lam-duyen",
+    coverImage: "/assets/lam-duyen/lam-duyen-cover.png",
+    coverAlt: "Poster preorder bo suu tap ao dai Vai Ao Ai Thu cua Lam Duyen",
   },
   {
     id: "global-ai-company-marketing",
@@ -239,6 +241,8 @@ export const projects: Project[] = [
       "Kênh TikTok chia sẻ kiến thức công nghệ, AI và chuyển đổi số đạt hơn 1.600 followers sau hơn 1 tháng; hiệu quả nội dung được theo dõi qua reach, engagement và tốc độ tăng trưởng kênh.",
     technologies: ["TikTok Growth", "Short Video Script", "Caption", "Trend Research", "AI Content", "Office Content"],
     detailUrl: "/gioi-thieu/du-an",
+    coverImages: ["/assets/global-ai/global-ai-tiktok.png", "/assets/global-ai/go-aaaaa-tiktok.png"],
+    coverAlt: "Anh dai dien kenh TikTok Global AI va Go Aaaaa",
   },
   {
     id: "automated-recruitment-marketing",
@@ -270,7 +274,10 @@ export const projects: Project[] = [
     result:
       "Góp phần làm rõ vấn đề người dùng gặp trong vận hành HRM, hỗ trợ cải thiện trải nghiệm khách hàng và giúp nội dung hướng dẫn sát hơn với nghiệp vụ thực tế.",
     technologies: ["Odoo HRM", "Customer Feedback", "User Research", "Documentation", "Product Experience"],
-    detailUrl: "/gioi-thieu/du-an",
+    detailUrl: "/du-an/thinh-cuong-hrm",
+    coverImage: "/assets/hrm/hrm1.png",
+    coverAlt: "Man hinh tong quan he thong HRM Odoo",
+    coverFit: "contain",
   },
 ];
 

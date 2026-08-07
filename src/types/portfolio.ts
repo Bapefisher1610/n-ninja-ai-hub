@@ -64,6 +64,10 @@ export interface Project {
   result: string;
   technologies: string[];
   detailUrl: string;
+  coverImage?: string;
+  coverImages?: string[];
+  coverAlt?: string;
+  coverFit?: "cover" | "contain";
 }
 
 export interface SkillGroup {
