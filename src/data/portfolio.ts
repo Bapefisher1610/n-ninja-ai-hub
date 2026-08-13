@@ -146,7 +146,7 @@ export const timeline: TimelineItem[] = [
     organization: "Công ty Cổ phần Global AI",
     role: "Marketing",
     description:
-      "Xây dựng thương hiệu cá nhân, phát triển kênh TikTok về công nghệ, AI và chuyển đổi số, triển khai marketing tuyển sinh tự động và hỗ trợ vận hành HRM trên nền tảng Odoo.",
+      "Xây dựng thương hiệu cá nhân, phát triển kênh TikTok về công nghệ, AI và chuyển đổi số, triển khai Marketing chương trình Ninja AI & Rocket OCP và hỗ trợ vận hành HRM trên nền tảng Odoo.",
     type: "work",
     skills: ["TikTok Growth", "AI Content", "n8n", "OpenClaw", "Odoo HRM"],
   },
@@ -168,7 +168,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "global-ai-recruitment-marketing",
-    company: "Marketing dự án tuyển sinh tự động",
+    company: "Marketing chương trình Ninja AI & Rocket OCP",
     role: "Marketing",
     period: "02/2026 - Nay",
     problem:
@@ -247,7 +247,7 @@ export const projects: Project[] = [
   {
     id: "automated-recruitment-marketing",
     number: "03",
-    title: "Marketing dự án tuyển sinh tự động",
+    title: "Marketing chương trình Ninja AI & Rocket OCP",
     description:
       "Ứng dụng AI tools, n8n và OpenClaw vào quy trình marketing tuyển sinh cho các vị trí công nghệ.",
     problem:
@@ -258,7 +258,13 @@ export const projects: Project[] = [
     result:
       "Hỗ trợ quản lý lên đến 1.000 CV, theo dõi nguồn ứng viên, tỷ lệ phản hồi, trạng thái hồ sơ và hiệu quả từng kênh tuyển sinh.",
     technologies: ["n8n", "OpenClaw", "AI Tools", "Facebook Groups", "Recruitment Marketing"],
-    detailUrl: "/gioi-thieu/du-an",
+    detailUrl: "/du-an/tuyen-sinh-tu-dong",
+    coverImages: [
+      "/assets/recruitment/robotics.png",
+      "/assets/recruitment/fullstack.png",
+      "/assets/recruitment/mobile-app.png",
+    ],
+    coverAlt: "Poster tuyen thuc tap sinh Robotics, Full-stack Developer va Mobile App cua Global AI",
   },
   {
     id: "thinh-cuong-hrm-operations",
