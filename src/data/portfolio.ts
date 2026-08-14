@@ -242,8 +242,8 @@ export const projects: Project[] = [
     technologies: ["TikTok Growth", "Short Video Script", "Caption", "Trend Research", "AI Content", "Office Content"],
     detailUrl: "/gioi-thieu/du-an",
     links: [
-      { label: "Bài nổi bật 01", url: "https://www.tiktok.com/@globalai.vn0", enabled: true },
-      { label: "Bài nổi bật 02", url: "https://www.tiktok.com/@globalai.vn", enabled: true },
+      { label: "Global AI", url: "https://www.tiktok.com/@globalai.vn0", enabled: true },
+      { label: "Gờ Aaaa", url: "https://www.tiktok.com/@globalai.vn", enabled: true },
     ],
     coverImages: ["/assets/global-ai/global-ai-tiktok.png", "/assets/global-ai/go-aaaaa-tiktok.png"],
     coverAlt: "Anh dai dien kenh TikTok Global AI va Go Aaaaa",
