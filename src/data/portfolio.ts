@@ -241,6 +241,10 @@ export const projects: Project[] = [
       "Kênh TikTok chia sẻ kiến thức công nghệ, AI và chuyển đổi số đạt hơn 1.600 followers sau hơn 1 tháng; hiệu quả nội dung được theo dõi qua reach, engagement và tốc độ tăng trưởng kênh.",
     technologies: ["TikTok Growth", "Short Video Script", "Caption", "Trend Research", "AI Content", "Office Content"],
     detailUrl: "/gioi-thieu/du-an",
+    links: [
+      { label: "Bài nổi bật 01", url: "https://www.tiktok.com/@globalai.vn0", enabled: true },
+      { label: "Bài nổi bật 02", url: "https://www.tiktok.com/@globalai.vn", enabled: true },
+    ],
     coverImages: ["/assets/global-ai/global-ai-tiktok.png", "/assets/global-ai/go-aaaaa-tiktok.png"],
     coverAlt: "Anh dai dien kenh TikTok Global AI va Go Aaaaa",
   },

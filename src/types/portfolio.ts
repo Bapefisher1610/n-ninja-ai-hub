@@ -64,6 +64,7 @@ export interface Project {
   result: string;
   technologies: string[];
   detailUrl: string;
+  links?: LinkConfig[];
   coverImage?: string;
   coverImages?: string[];
   coverAlt?: string;

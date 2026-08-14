@@ -66,6 +66,29 @@ export const ProjectSection = () => {
                         </p>
                         <h3 className="mt-2 text-3xl font-bold">{project.title}</h3>
                       </div>
+                      {project.links?.some((link) => link.enabled) && (
+                        <div className="px-1">
+                          <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200">
+                            2 bài viết nổi bật của kênh
+                          </p>
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {project.links
+                              .filter((link) => link.enabled)
+                              .map((link) => (
+                                <a
+                                  key={link.url}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="inline-flex items-center gap-2 rounded-full border border-emerald-300/25 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-50 transition hover:border-emerald-200/60 hover:bg-emerald-300/20"
+                                >
+                                  {link.label}
+                                  <ArrowUpRight className="h-4 w-4" />
+                                </a>
+                              ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <>
